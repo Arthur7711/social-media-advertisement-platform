@@ -16,8 +16,11 @@
 .leftHead {
   display: grid;
   grid-template-columns: 6fr 3fr 3fr;
-  justify-items: end;
+  justify-items: flex-end;
   place-items: center;
+}
+.navigation {
+  padding-left: 50%;
 }
 .rightHead {
   display: grid;

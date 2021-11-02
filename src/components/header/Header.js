@@ -11,8 +11,12 @@ const Header = () => {
         <div style={{ width: 190 }}>
           <img style={{ width: "100%" }} src={logo} alt="logo" />
         </div>
-        <NavLink to="/features">Features</NavLink>
-        <NavLink to="/pricing">Pricing</NavLink>
+        <div className={styles.navigation}>
+          <NavLink to="/features">Features</NavLink>
+        </div>
+        <div className={styles.navigation}>
+          <NavLink to="/pricing">Pricing</NavLink>
+        </div>
       </div>
       <div></div>
       <div className={styles.rightHead}>
