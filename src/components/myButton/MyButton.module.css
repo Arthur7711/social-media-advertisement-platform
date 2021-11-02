@@ -1,0 +1,19 @@
+.myBtn {
+  background: linear-gradient(92.21deg, #005792 6.65%, #04118a 106.65%);
+  box-shadow: 0px 6px 7px rgba(31, 31, 31, 0.15);
+  border-radius: 20px;
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myBtn span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 10px;
+}

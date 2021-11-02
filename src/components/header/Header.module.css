@@ -1,0 +1,35 @@
+.head {
+  height: 125px;
+  background: #ffffff;
+  box-shadow: 0px 4px 43px rgba(135, 135, 135, 0.1);
+  display: grid;
+  grid-template-columns: 5fr 2fr 5fr;
+  justify-items: center;
+  place-items: center;
+}
+.head a {
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #005792;
+}
+.leftHead {
+  display: grid;
+  grid-template-columns: 6fr 3fr 3fr;
+  justify-items: end;
+  place-items: center;
+}
+.rightHead {
+  display: grid;
+  grid-template-columns: 3fr 3fr 6fr;
+  justify-items: start;
+  place-items: center;
+}
+.lagnSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lagnSelect select {
+  border: none;
+}
