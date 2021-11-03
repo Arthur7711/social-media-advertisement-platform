@@ -1,0 +1,9 @@
+.small {
+  width: 240px;
+  height: 180px;
+  background: #fff;
+  box-shadow: 0px 6px 25px rgba(101, 101, 101, 0.1);
+  border-radius: 26px;
+  padding: 10px 20px;
+  margin-right: 20px;
+}

@@ -1,0 +1,48 @@
+.midArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.midArea > * {
+  margin-right: 50px;
+}
+.roundedAreas {
+  width: 400px;
+  height: 160px;
+  background: #ffffff;
+  box-shadow: 0px 6px 25px rgba(101, 101, 101, 0.1);
+  border-radius: 26px;
+  color: #005792;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roundedAreas b {
+  font-weight: 600;
+  font-size: 28px;
+}
+.roundedAreas p {
+  font-size: 16px;
+}
+.rounds {
+  width: 160px;
+  height: 160px;
+  background: #ffffff;
+  box-shadow: 0px 4px 25px rgba(134, 134, 134, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rounds span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #005792;
+}
+.secMidArea {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
