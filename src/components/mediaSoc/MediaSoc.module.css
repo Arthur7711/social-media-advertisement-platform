@@ -1,0 +1,11 @@
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media p {
+  font-family: "Poppins";
+  font-size: 18px;
+  color: #005792;
+  margin-left: 10px;
+}
