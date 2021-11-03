@@ -21,8 +21,12 @@
 }
 .platforms {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 0 5%;
+}
+.platforms > * {
+  margin-right: 20px;
 }
 .bottomPart {
   margin-top: 100px;
