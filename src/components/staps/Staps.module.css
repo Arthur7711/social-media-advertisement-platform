@@ -1,0 +1,14 @@
+.steps {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e4eefa;
+  height: 400px;
+}
+.imageArea {
+  width: 60em;
+}
+.imageArea img {
+  width: 100%;
+}
