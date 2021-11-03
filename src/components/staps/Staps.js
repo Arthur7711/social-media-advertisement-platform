@@ -6,7 +6,7 @@ const Staps = () => {
   return (
     <div className={styles.steps}>
       <div className={styles.imageArea}>
-        <img alt="image" src={steps} />
+        <img alt="steps" src={steps} />
       </div>
     </div>
   );
