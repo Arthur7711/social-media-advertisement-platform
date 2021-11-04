@@ -1,0 +1,30 @@
+.tall {
+  box-shadow: 0px 6px 25px rgba(101, 101, 101, 0.1);
+  border-radius: 26px;
+  width: 320px;
+  padding: 10px 20px;
+}
+.tall h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 24px;
+}
+.tall h4 {
+  font-family: "Poppins";
+  font-size: 18px;
+}
+.tallChild p {
+  font-family: "Poppins";
+  font-size: 16px;
+}
+.tall strong {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 40px;
+}
+.btnPart{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px; 
+}

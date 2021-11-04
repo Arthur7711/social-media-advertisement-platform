@@ -14,12 +14,12 @@ const Bluearea = () => {
     {
       image: ico1,
       title: "SMBs & Startups",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
     },
     {
       image: ico2,
       title: "E-Commerce Brands",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
     },
     {
       image: ico3,
