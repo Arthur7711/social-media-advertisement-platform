@@ -3,6 +3,7 @@ import Bluearea from "../../components/blueArea/BlueArea";
 import Smallcard from "../../components/cards/smallCard/SmallCard";
 import Header from "../../components/header/Header";
 import Mainarea from "../../components/mainArea/MainArea";
+import Myfooter from "../../components/myFooter/MyFooter";
 import Paymantpart from "../../components/paymantPart/PaymantPart";
 import Socialpart from "../../components/socialPart/SocialPart";
 import Staps from "../../components/staps/Staps";
@@ -55,6 +56,7 @@ const Home = () => {
       <Bluearea />
       <Paymantpart />
       <Workersarea />
+      <Myfooter />
     </>
   );
 };
