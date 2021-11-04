@@ -1,0 +1,35 @@
+.blueArea {
+  background: linear-gradient(92.21deg, #005792 6.65%, #04118a 106.65%);
+  padding: 50px;
+}
+.blueArea .h3 {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 46px;
+  color: #ffffff;
+  margin-left: 3%;
+}
+.blueArea .h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 46px;
+  color: #ffffff;
+  margin-left: 3%;
+}
+.blueArea .p {
+  font-family: "Poppins";
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: 3%;
+}
+.cardArea {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  justify-items: center;
+}
+.btnPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}

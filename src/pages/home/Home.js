@@ -1,4 +1,5 @@
 import React from "react";
+import Bluearea from "../../components/blueArea/BlueArea";
 import Smallcard from "../../components/cards/smallCard/SmallCard";
 import Header from "../../components/header/Header";
 import Mainarea from "../../components/mainArea/MainArea";
@@ -49,6 +50,7 @@ const Home = () => {
         />
       </div>
       <Mainarea />
+      <Bluearea />
     </>
   );
 };

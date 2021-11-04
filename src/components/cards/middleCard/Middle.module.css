@@ -1,0 +1,43 @@
+.mid {
+  background: #ffffff;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 26px;
+  width: 350px;
+  height: 200px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.mid h2 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 24px;
+  color: #04118a;
+}
+.mid p {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #475761;
+}
+.imageArea {
+  width: 40px;
+}
+.imageArea img {
+  width: 100%;
+}
+.mix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.mix span {
+  font-size: 16px;
+  color: #1daaff;
+  margin-right: 10px;
+}
+.forMIx {
+  display: flex;
+  justify-content: flex-end;
+}
