@@ -1,0 +1,45 @@
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainArea {
+  padding: 50px 100px;
+  background: #ffffff;
+  box-shadow: 0px 6px 25px rgba(101, 101, 101, 0.1);
+  border-radius: 26px;
+}
+.mainArea h3 {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 40px;
+  color: #005792;
+}
+.mainArea h2 {
+  color: #005792;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 48px;
+}
+.mainArea p {
+  font-size: 18px;
+  color: #005792;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.photoArea {
+  max-width: 500px;
+}
+.photoArea img {
+  width: 100%;
+}
+.btnArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}

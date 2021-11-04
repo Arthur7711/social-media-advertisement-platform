@@ -1,6 +1,7 @@
 import React from "react";
 import Smallcard from "../../components/cards/smallCard/SmallCard";
 import Header from "../../components/header/Header";
+import Mainarea from "../../components/mainArea/MainArea";
 import Socialpart from "../../components/socialPart/SocialPart";
 import Staps from "../../components/staps/Staps";
 import styles from "./Home.module.css";
@@ -47,6 +48,7 @@ const Home = () => {
           COLOR="#005792"
         />
       </div>
+      <Mainarea />
     </>
   );
 };
