@@ -1,0 +1,37 @@
+.workers {
+  margin-top: 100px;
+  padding: 50px 100px;
+}
+.workers h2 {
+  font-family: "Poppins";
+  font-size: 28px;
+  line-height: 54px;
+  color: #1daaff;
+}
+.workers b {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #005792;
+}
+.workPart {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.workPart > * {
+  margin-right: 100px;
+}
+.sms {
+  height: 150px;
+  background: #fff;
+  border-radius: 26px;
+  width: 300px;
+  padding: 10px;
+  box-shadow: 0px 6px 25px rgba(101, 101, 101, 0.1);
+}
+.sms span {
+  margin-left: 20px;
+}
