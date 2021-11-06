@@ -10,6 +10,7 @@ import img4 from "../../images/icon9.png";
 import img5 from "../../images/icon10.png";
 import Mainarea from "../../components/mainArea/MainArea";
 import SecBlue from "../../components/secBlue/SecBlue";
+import Myfooter from '../../components/myFooter/MyFooter'
 
 export default function Features() {
   const data = [
@@ -78,7 +79,13 @@ export default function Features() {
       <div className={styles.featNav}>
         <div className={styles.nav}>
           {data.map((el, i) => (
-            <Long key={i} title={el.title} SRC={el.image} desc={el.desc} doesSelected={el.doesSelected} />
+            <Long
+              key={i}
+              title={el.title}
+              SRC={el.image}
+              desc={el.desc}
+              doesSelected={el.doesSelected}
+            />
           ))}
         </div>
         <div className={styles.mainAreaPart}>
@@ -86,6 +93,7 @@ export default function Features() {
         </div>
       </div>
       <SecBlue />
+      <Myfooter />
     </div>
   );
 }

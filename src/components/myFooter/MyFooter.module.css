@@ -1,5 +1,6 @@
 .topFoot {
   position: relative;
+  margin-top: 100px;
 }
 .timer {
   position: absolute;
@@ -48,6 +49,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
 }
 .menuPart {
   display: flex;
