@@ -1,6 +1,7 @@
 .long {
   display: grid;
   grid-template-columns: 30% 70%;
+  justify-items: center;
   padding: 20px;
   width: 400px;
   height: 150px;
@@ -11,4 +12,19 @@
   width: 100px;
   height: 100px;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.texts h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 24px;
+  margin: 5px 0 !important;
+  color: #04118a;
+}
+.texts h6 {
+  font-family: "Poppins";
+  font-size: 16px;
+  margin: 0 !important;
 }

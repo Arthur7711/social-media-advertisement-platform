@@ -1,9 +1,48 @@
 import React from "react";
+import Long from "../../components/cards/longCard/Long";
 import Header from "../../components/header/Header";
 import Mybutton from "../../components/myButton/MyButton";
 import styles from "./Features.module.css";
+import img1 from "../../images/ico3.png";
+import img2 from "../../images/icon7.png";
+import img3 from "../../images/icon8.png";
+import img4 from "../../images/icon9.png";
+import img5 from "../../images/icon10.png";
+import Mainarea from "../../components/mainArea/MainArea";
 
 export default function Features() {
+  const data = [
+    {
+      image: img1,
+      title: "Quick Ads",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      doesSelected: true,
+    },
+    {
+      image: img2,
+      title: "Discover Platforms",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      doesSelected: null,
+    },
+    {
+      image: img3,
+      title: "Gain Visibility",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      doesSelected: null,
+    },
+    {
+      image: img4,
+      title: "Automate Audience",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      doesSelected: null,
+    },
+    {
+      image: img5,
+      title: "Save & Collaborate",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      doesSelected: null,
+    },
+  ];
   return (
     <div className={styles.feat}>
       <Header />
@@ -35,6 +74,16 @@ export default function Features() {
           />
         </div>
       </main>
+      <div className={styles.featNav}>
+        <div className={styles.nav}>
+          {data.map((el, i) => (
+            <Long key={i} title={el.title} SRC={el.image} desc={el.desc} doesSelected={el.doesSelected} />
+          ))}
+        </div>
+        <div className={styles.mainAreaPart}>
+          <Mainarea />
+        </div>
+      </div>
     </div>
   );
 }

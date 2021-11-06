@@ -21,3 +21,17 @@
   align-items: center;
   margin-top: 50px;
 }
+.featNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  margin-bottom: 50px;
+}
+.mainAreaPart {
+  margin-top: 25px;
+  margin-left: 50px;
+}
+.nav > * {
+  margin-top: 25px;
+}
