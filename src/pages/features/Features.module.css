@@ -1,0 +1,23 @@
+.mainText {
+  padding: 100px;
+}
+.mainText h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 72px;
+  text-align: center;
+  color: #005792;
+}
+.mainText p {
+  font-family: "Poppins";
+  line-height: 27px;
+  font-size: 18px;
+  text-align: center;
+  color: #005792;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
