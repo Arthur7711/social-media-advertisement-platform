@@ -9,6 +9,7 @@ import img3 from "../../images/icon8.png";
 import img4 from "../../images/icon9.png";
 import img5 from "../../images/icon10.png";
 import Mainarea from "../../components/mainArea/MainArea";
+import SecBlue from "../../components/secBlue/SecBlue";
 
 export default function Features() {
   const data = [
@@ -84,6 +85,7 @@ export default function Features() {
           <Mainarea />
         </div>
       </div>
+      <SecBlue />
     </div>
   );
 }

@@ -1,0 +1,32 @@
+.sec {
+  background: linear-gradient(92.21deg, #005792 6.65%, #04118a 106.65%);
+  padding: 100px;
+}
+.sec .h3 {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 36px;
+  color: #ffffff;
+  margin-left: 3%;
+  margin: 0 !important;
+}
+.sec .h2 {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 64px;
+  color: #ffffff;
+  margin-left: 3%;
+  margin: 0 !important;
+}
+.sec .p {
+  font-family: "Poppins";
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 100px;
+}
+.btnPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
