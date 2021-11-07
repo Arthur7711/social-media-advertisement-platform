@@ -37,12 +37,12 @@ const Slider = ({ data }) => {
               color: el.color,
               fontFamily: "Poppins",
               userSelect: "none",
-              height: '250px',
-              width: 450,
+              width: 400,
               backgroundColor: "#fff",
               boxShadow: "0px 6px 25px rgba(101, 101, 101, 0.1)",
               borderRadius: "26px",
               padding: "150px 0 20px 0",
+              margin: "0 20px",
             }}
           >
             <h1
@@ -61,7 +61,7 @@ const Slider = ({ data }) => {
                 color: "#04118A",
                 fontSize: 28,
                 fontWeight: 600,
-                margin: '20px 0',
+                margin: "20px 0",
               }}
             >
               {el.subTitle}

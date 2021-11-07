@@ -29,9 +29,8 @@
   margin-bottom: 50px;
 }
 .mainAreaPart {
-  margin-top: 25px;
   margin-left: 50px;
 }
 .nav > * {
-  margin-top: 25px;
+  margin-bottom: 25px;
 }
