@@ -1,0 +1,18 @@
+.narrow {
+  background: #ffffff;
+  box-shadow: 0px 6px 25px rgba(101, 101, 101, 0.1);
+  border-radius: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 20px 0;
+}
+.text {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 40rem;
+  flex-wrap: nowrap;
+  color: #04118a;
+}

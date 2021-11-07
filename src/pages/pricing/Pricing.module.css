@@ -1,0 +1,54 @@
+.mainText {
+  padding: 100px;
+  /* margin-bottom: 100px; */
+}
+.mainText h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 72px;
+  text-align: center;
+  color: #005792;
+}
+.mainText p {
+  font-family: "Poppins";
+  line-height: 27px;
+  font-size: 18px;
+  text-align: center;
+  color: #2fabff;
+}
+.cardsArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardsArea > * {
+  margin: 0 20px;
+}
+.footBar {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  color: #04118a;
+}
+.subTit {
+  margin-top: 100px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 46px;
+  color: #04118a;
+  text-align: center;
+}
+.subInfo {
+  font-family: "Poppins";
+  font-size: 18px;
+  text-align: center;
+  color: #2fabff;
+  margin-bottom: 100px;
+}
+.sect {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  margin-bottom: 100px;
+}
