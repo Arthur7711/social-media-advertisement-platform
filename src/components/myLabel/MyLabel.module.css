@@ -1,0 +1,35 @@
+.dv label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.dv label p {
+  font-family: "Mulish";
+  font-weight: bold;
+  font-size: 14px;
+  color: #303030;
+  margin-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+.dv label span {
+  color: red;
+}
+.dv label input {
+  background: #ffffff;
+  border: 1px solid #99c8ff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 40rem;
+  height: 75px;
+  font-size: 16px;
+  color: #acacac;
+  padding: 10px;
+}
+.dv label input::placeholder {
+  font-family: "Mulish";
+  font-weight: 600;
+  font-size: 16px;
+  color: #acacac;
+}
