@@ -26,6 +26,7 @@ const Tall = ({ title, subtitle, HEIGHT, texts, money, COLOR, BG }) => {
           COLOR={BG.length < 10 ? BG : "#04118A"}
           BG={COLOR ? COLOR : "#04118A"}
           WIDTH="340px"
+          HREF='/register'
         />
       </div>
     </div>

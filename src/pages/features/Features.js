@@ -10,7 +10,7 @@ import img4 from "../../images/icon9.png";
 import img5 from "../../images/icon10.png";
 import Mainarea from "../../components/mainArea/MainArea";
 import SecBlue from "../../components/secBlue/SecBlue";
-import Myfooter from '../../components/myFooter/MyFooter'
+import Myfooter from "../../components/myFooter/MyFooter";
 
 export default function Features() {
   const data = [
@@ -57,6 +57,7 @@ export default function Features() {
         <div className={styles.btn}>
           <Mybutton
             title="Get started"
+            HREF="/register"
             ico={
               <svg
                 xmlns="http://www.w3.org/2000/svg"

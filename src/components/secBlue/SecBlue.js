@@ -39,6 +39,7 @@ export default function SecBlue() {
       </div>
       <div className={styles.btnPart}>
         <Mybutton
+          HREF="/register"
           imgColor="#04118A"
           COLOR="#04118A"
           BG="#fff"

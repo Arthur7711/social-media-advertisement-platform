@@ -25,6 +25,7 @@ const Mainarea = () => {
         <div className={styles.btnArea}>
           <Mybutton
             title="Get started"
+            HREF='/register'
             ico={
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -20,12 +20,13 @@ const Register = () => {
           <Mylabel name="Password" type="password" plat="Password" />
           <Mylabel name="Country" type="text" plat="Select you country" />
 
-          <p className={styles.p} >
+          <p className={styles.p}>
             By registering you agree to the Terms of Use
           </p>
           <div className={styles.btn}>
             <Mybutton
               title="Register"
+              HREF="/user"
               ico={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

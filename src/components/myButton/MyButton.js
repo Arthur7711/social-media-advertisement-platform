@@ -1,9 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./MyButton.module.css";
 
-const Mybutton = ({ title, BG, ico, COLOR, imgColor, WIDTH }) => {
+const Mybutton = ({ title, BG, ico, COLOR, imgColor, WIDTH, HREF }) => {
+  const history = useHistory();
   return (
-    <button style={{ background: BG, width: WIDTH }} className={styles.myBtn}>
+    <button
+      onClick={() => history.push(HREF)}
+      style={{ background: BG, width: WIDTH }}
+      className={styles.myBtn}
+    >
       <span style={{ color: COLOR }}>{title}</span>
       <div
         style={{

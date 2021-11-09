@@ -61,6 +61,7 @@ const Bluearea = () => {
           COLOR="#04118A"
           BG="#fff"
           title="Get started"
+          HREF='/register'
           ico={
             <svg
               xmlns="http://www.w3.org/2000/svg"

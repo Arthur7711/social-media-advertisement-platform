@@ -20,6 +20,7 @@ const Login = () => {
           <div className={styles.btn}>
             <Mybutton
               title="Log In"
+              HREF='/user'
               ico={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
