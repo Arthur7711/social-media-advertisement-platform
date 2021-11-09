@@ -1,11 +1,11 @@
 import React from "react";
+import styles from "./Register.module.css";
 import Mylabel from "../../components/myLabel/MyLabel";
-import styles from "./Login.module.css";
 import Mybutton from "../../components/myButton/MyButton";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 
-const Login = () => {
+const Register = () => {
   return (
     <div className={styles.log}>
       <div className={styles.all}>
@@ -15,11 +15,15 @@ const Login = () => {
         <div className={styles.login}>
           <h1>Let's Get Started</h1>
           <p>Sign in to continue to ADCLOUD</p>
+          <Mylabel name="Name" type="text" plat="Enter Your First Name" />
           <Mylabel name="E-Mail" type="email" plat="Enter Your E-Mail" />
           <Mylabel name="Password" type="password" plat="Password" />
+          <p className={styles.p}>
+            By registering you agree to the Terms of Use
+          </p>
           <div className={styles.btn}>
             <Mybutton
-              title="Log In"
+              title="Register"
               ico={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -39,8 +43,8 @@ const Login = () => {
             />
           </div>
           <div className={styles.to}>
-            <span>Don't have an account?</span>
-            <Link to="/register"> Free Register</Link>
+            <span>Already have an account?</span>
+            <Link to="/login"> Login</Link>
           </div>
         </div>
       </div>
@@ -48,4 +52,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
