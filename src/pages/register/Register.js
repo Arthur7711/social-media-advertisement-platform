@@ -18,7 +18,9 @@ const Register = () => {
           <Mylabel name="Name" type="text" plat="Enter Your First Name" />
           <Mylabel name="E-Mail" type="email" plat="Enter Your E-Mail" />
           <Mylabel name="Password" type="password" plat="Password" />
-          <p className={styles.p}>
+          <Mylabel name="Country" type="text" plat="Select you country" />
+
+          <p className={styles.p} >
             By registering you agree to the Terms of Use
           </p>
           <div className={styles.btn}>
