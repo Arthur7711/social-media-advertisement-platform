@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -22,6 +22,8 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import arrow from "../../../images/Vector.png";
 import Simplebutton from "../../simpleButton/SimpleButton";
+import jingle from "../../../images/jingle.png";
+import user from "../../../images/girl.jpg";
 
 function stringToColor(string) {
   let hash = 0;
@@ -100,6 +102,12 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export default function PersistentDrawerLeft() {
+  const [userInfo, setUserInfo] = useState({
+    image: user,
+    name: "Charles Hu",
+    title: "Business Admin",
+  });
+
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -213,8 +221,62 @@ export default function PersistentDrawerLeft() {
               </div>
             </Typography>
           </div>
-          <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Simplebutton COLOR="#fff" BG="#42CC23" text="UPGRADE" />
+            <div
+              style={{
+                width: 42,
+                height: 42,
+                background: "#F4F4F4",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                margin: "0 15px",
+              }}
+            >
+              <img alt="jingle" src={jingle} />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Avatar alt="Remy Sharp" src={userInfo.image} />
+              <div style={{ margin: "0 10px" }}>
+                <p
+                  style={{
+                    fontFamily: "Poppins",
+                    fontWeight: "bold",
+                    fontSize: 16,
+                    color: "#005792",
+                    margin: 0,
+                  }}
+                >
+                  {userInfo.name}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "Poppins",
+                    fontWeight: "bold",
+                    fontSize: 14,
+                    color: "#005792",
+                    margin: 0,
+                  }}
+                >
+                  {userInfo.title}
+                </p>
+              </div>
+              <img alt="arrow" src={arrow} />
+            </div>
           </div>
         </Toolbar>
       </AppBar>
