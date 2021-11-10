@@ -523,7 +523,9 @@ export default function PersistentDrawerLeft({ children }) {
         {navState.map((el) => (
           <Route exact path={`/${el.text.toLowerCase()}`} component={el.text} />
         ))}
-        <div style={{ padding: "100px", background: "#F7FBFE" }}>
+        <div
+          style={{ padding: "100px", background: "#F7FBFE", height: "100vh" }}
+        >
           <div style={{ background: "#FFFFFF" }}>{children}</div>
         </div>
       </Main>
