@@ -4,7 +4,7 @@ import PersistentDrawerLeft from "../../components/userComp/headerNav/HeaderNav"
 const User = () => {
   return (
     <div>
-      <PersistentDrawerLeft>{}</PersistentDrawerLeft>
+      <PersistentDrawerLeft>hello from Dashboard</PersistentDrawerLeft>
     </div>
   );
 };
