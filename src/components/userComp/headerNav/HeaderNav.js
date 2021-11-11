@@ -52,7 +52,7 @@ function stringAvatar(name) {
     sx: {
       bgcolor: stringToColor(name),
     },
-    children: `${name.split(" ")[0][0]}${name.split(" ")[0][1].toUpperCase()}`,
+    children: `${name.split(" ")[0][0].toUpperCase()}${name.split(" ")[0][1].toUpperCase()}`,
   };
 }
 
@@ -526,7 +526,9 @@ export default function PersistentDrawerLeft({ children }) {
         <div
           style={{ padding: "100px", background: "#F7FBFE", height: "100vh" }}
         >
-          <div style={{ background: "#FFFFFF" }}>{children}</div>
+          <div style={{ background: "#FFFFFF", padding: "20px 50px" }}>
+            {children}
+          </div>
         </div>
       </Main>
     </Box>
