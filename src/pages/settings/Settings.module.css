@@ -1,0 +1,39 @@
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head h1 {
+  color: #04118a;
+  margin-left: 15px;
+}
+.bus .p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+  text-align: center;
+}
+.topArea {
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 20px;
+}
+.toggleTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selectArea {
+  display: flex;
+  align-items: center;
+}
+.selectArea span {
+  font-size: 18px;
+  color: #1daaff;
+  margin-left: 10px;
+}
+.pers {
+  font-size: 18px;
+  color: #a09da1;
+}

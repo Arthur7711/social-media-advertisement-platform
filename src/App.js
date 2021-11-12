@@ -10,6 +10,7 @@ import Businesses from './pages/businesses/Businesses'
 import Accounts from './pages/accounts/Accounts'
 import Introduction from './pages/introduction/Introduction'
 import Textgenerator from './pages/textGenerator/TextGenerator'
+import Settings from "./pages/settings/Settings";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route exact path="/accounts" component={Accounts} />
       <Route exact path="/introduction" component={Introduction} />
       <Route exact path="/textgenerator" component={Textgenerator} />
+      <Route exact path="/settings" component={Settings} />
     </BrowserRouter>
   );
 }
