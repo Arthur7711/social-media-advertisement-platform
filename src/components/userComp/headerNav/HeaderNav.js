@@ -27,6 +27,9 @@ import { Route } from "react-router-dom";
 import talk from "../../../images/talk.png";
 import coin from "../../../images/coin.png";
 import selected from "../../../images/selected.png";
+import settings from "../../../images/settings.png";
+import question from "../../../images/question.png";
+import out from "../../../images/out.png";
 
 function stringToColor(string) {
   let hash = 0;
@@ -140,6 +143,7 @@ export default function PersistentDrawerLeft({ children }) {
     },
   ]);
   const [isopen, setIsOpen] = useState(false);
+  const [doesOpen, setDoesOpen] = useState(false);
 
   const navState = [
     {
@@ -277,6 +281,10 @@ export default function PersistentDrawerLeft({ children }) {
     setIsOpen(!isopen);
   };
 
+  const handleUserIntOpen = () => {
+    setDoesOpen(!doesOpen);
+  };
+
   const activeClasses = { fill: "#005792", color: "#005792" };
   return (
     <Box
@@ -405,10 +413,12 @@ export default function PersistentDrawerLeft({ children }) {
               <img onClick={toggleOpen} alt="jingle" src={jingle} />
             </div>
             <div
+              onClick={handleUserIntOpen}
               style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                cursor: "pointer",
               }}
             >
               <Avatar alt="Remy Sharp" src={userInfo.image} />
@@ -624,7 +634,63 @@ export default function PersistentDrawerLeft({ children }) {
               ))}
             </main>
           </div>
-          
+          <div
+            style={{
+              background: "#FFFFFF",
+              boxShadow: "0px 1px 8px rgba(0, 0, 0, 0.06)",
+              borderRadius: 6,
+              width: 250,
+              height: 200,
+              position: "absolute",
+              top: 70,
+              right: 0,
+              padding: 20,
+              display: doesOpen ? "block" : "none",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                borderBottom: "1px solid #DDE1EB",
+                paddingBottom: 10,
+                cursor: "pointer",
+              }}
+            >
+              <img src={settings} alt="settings" />
+              <span style={{ color: "#575757", marginLeft: 10 }}>Settings</span>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                borderBottom: "1px solid #DDE1EB",
+                paddingBottom: 10,
+                margin: "20px 0",
+                cursor: "pointer",
+              }}
+            >
+              <img src={question} alt="question" />
+              <span style={{ color: "#575757", marginLeft: 10 }}>
+                Help Center
+              </span>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                borderBottom: "1px solid #DDE1EB",
+                paddingBottom: 10,
+                cursor: "pointer",
+              }}
+            >
+              <img src={out} alt="logout" />
+              <span style={{ color: "#575757", marginLeft: 10 }}>Logout</span>
+            </div>
+          </div>
           <div style={{ background: "#FFFFFF", padding: "20px 50px" }}>
             {children}
           </div>
