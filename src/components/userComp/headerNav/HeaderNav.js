@@ -26,6 +26,7 @@ import { NavLink } from "react-router-dom";
 import { Route } from "react-router-dom";
 import talk from "../../../images/talk.png";
 import coin from "../../../images/coin.png";
+import SimpleDialogDemo from "../RingMenu";
 
 function stringToColor(string) {
   let hash = 0;
@@ -52,7 +53,9 @@ function stringAvatar(name) {
     sx: {
       bgcolor: stringToColor(name),
     },
-    children: `${name.split(" ")[0][0].toUpperCase()}${name.split(" ")[0][1].toUpperCase()}`,
+    children: `${name.split(" ")[0][0].toUpperCase()}${name
+      .split(" ")[0][1]
+      .toUpperCase()}`,
   };
 }
 
@@ -354,7 +357,8 @@ export default function PersistentDrawerLeft({ children }) {
             }}
           >
             <Simplebutton COLOR="#fff" BG="#42CC23" text="UPGRADE" />
-            <div
+            <SimpleDialogDemo />
+            {/* <div
               style={{
                 width: 42,
                 height: 42,
@@ -364,10 +368,11 @@ export default function PersistentDrawerLeft({ children }) {
                 justifyContent: "center",
                 alignItems: "center",
                 margin: "0 15px",
+                cursor: "pointer",
               }}
             >
               <img alt="jingle" src={jingle} />
-            </div>
+            </div> */}
             <div
               style={{
                 display: "flex",
