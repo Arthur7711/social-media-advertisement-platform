@@ -26,7 +26,7 @@ import { NavLink } from "react-router-dom";
 import { Route } from "react-router-dom";
 import talk from "../../../images/talk.png";
 import coin from "../../../images/coin.png";
-import SimpleDialogDemo from "../RingMenu";
+import selected from "../../../images/selected.png";
 
 function stringToColor(string) {
   let hash = 0;
@@ -113,6 +113,33 @@ export default function PersistentDrawerLeft({ children }) {
     title: "Business Admin",
   });
   const [coins, setCoins] = useState(0);
+  const [incomingData, setIncomingData] = useState([
+    {
+      image: user,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    },
+    {
+      image: user,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    },
+    {
+      image: user,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    },
+    {
+      image: user,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    },
+    {
+      image: user,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    },
+    {
+      image: user,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    },
+  ]);
+  const [isopen, setIsOpen] = useState(false);
 
   const navState = [
     {
@@ -246,6 +273,10 @@ export default function PersistentDrawerLeft({ children }) {
     setOpen(false);
   };
 
+  const toggleOpen = () => {
+    setIsOpen(!isopen);
+  };
+
   const activeClasses = { fill: "#005792", color: "#005792" };
   return (
     <Box
@@ -357,8 +388,8 @@ export default function PersistentDrawerLeft({ children }) {
             }}
           >
             <Simplebutton COLOR="#fff" BG="#42CC23" text="UPGRADE" />
-            <SimpleDialogDemo />
-            {/* <div
+            {/* <SimpleDialogDemo /> */}
+            <div
               style={{
                 width: 42,
                 height: 42,
@@ -371,8 +402,8 @@ export default function PersistentDrawerLeft({ children }) {
                 cursor: "pointer",
               }}
             >
-              <img alt="jingle" src={jingle} />
-            </div> */}
+              <img onClick={toggleOpen} alt="jingle" src={jingle} />
+            </div>
             <div
               style={{
                 display: "flex",
@@ -531,6 +562,69 @@ export default function PersistentDrawerLeft({ children }) {
         <div
           style={{ padding: "100px", background: "#F7FBFE", height: "100vh" }}
         >
+          <div
+            style={{
+              background: "#FFFFFF",
+              boxShadow: "0px 1px 8px rgba(0, 0, 0, 0.06)",
+              borderRadius: 6,
+              width: 350,
+              height: 430,
+              padding: 20,
+              position: "absolute",
+              zIndex: 100,
+              top: 70,
+              right: 0,
+              display: isopen ? "block" : "none",
+              overflowY: "auto",
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "flex-start" }}>
+              <img src={jingle} alt="jingle" />
+              <span style={{ marginLeft: 15, color: "#04118A" }}>
+                Notification
+              </span>
+            </div>
+            <p
+              style={{
+                fontSize: 14,
+                textAlign: "center",
+                color: "#575757",
+                marginTop: 20,
+              }}
+            >
+              EARLIER
+            </p>
+            <main>
+              {incomingData.map((el) => (
+                <div
+                  style={{
+                    border: " 1px solid #DDE1EB",
+                    boxSizing: "border-box",
+                    borderRadius: 6,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginTop: 15,
+                    padding: 10,
+                  }}
+                >
+                  <Avatar alt="Remy Sharp" src={el.image} />
+                  <p
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      margin: "0 5px",
+                      color: "#1DAAFF",
+                    }}
+                  >
+                    {el.text}
+                  </p>
+                  <img alt="selected" src={selected} />
+                </div>
+              ))}
+            </main>
+          </div>
+          
           <div style={{ background: "#FFFFFF", padding: "20px 50px" }}>
             {children}
           </div>

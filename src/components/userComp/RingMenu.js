@@ -29,7 +29,11 @@ function SimpleDialog(props) {
   };
 
   return (
-    <Dialog onClose={handleClose} open={open}>
+    <Dialog
+      onClose={handleClose}
+      open={open}
+      style={{ position: "absolute", top: 5, right: 5 }}
+    >
       <DialogTitle
         style={{
           display: "flex",
