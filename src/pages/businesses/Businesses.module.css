@@ -8,7 +8,6 @@
   margin-left: 15px;
 }
 .bus .p {
-  font-family: "Poppins";
   font-weight: 500;
   font-size: 16px;
   color: #a09da1;
@@ -16,7 +15,6 @@
 }
 .sub {
   margin-top: 30px;
-  font-family: "Poppins";
   font-weight: 500;
   font-size: 22px;
   color: #a09da1;
@@ -38,7 +36,6 @@
   border-radius: 6px;
   width: 280px;
   height: 45px;
-  font-family: "Poppins";
   font-weight: bold;
   font-size: 16px;
   color: #ffffff;
