@@ -279,10 +279,12 @@ export default function PersistentDrawerLeft({ children }) {
 
   const toggleOpen = () => {
     setIsOpen(!isopen);
+    setDoesOpen(false);
   };
 
   const handleUserIntOpen = () => {
     setDoesOpen(!doesOpen);
+    setIsOpen(false);
   };
 
   const activeClasses = { fill: "#005792", color: "#005792" };
