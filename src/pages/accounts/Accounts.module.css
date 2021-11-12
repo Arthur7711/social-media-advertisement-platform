@@ -1,0 +1,105 @@
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head h1 {
+  color: #005792;
+  margin-left: 15px;
+}
+.acc .p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+  text-align: center;
+}
+.accMain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  padding: 15px;
+}
+.elem {
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px 10px;
+  width: 510px;
+  margin-bottom: 20px;
+}
+.topElem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topElem > * {
+  margin-right: 25px;
+}
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f4f4f4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+.one span {
+  font-size: 18px;
+  color: #1daaff;
+  margin-left: 10px;
+}
+.first {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 12px;
+  color: #42cc23;
+  list-style: inside;
+}
+.oneGoogle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #f4f4f4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px 10px;
+  width: 100%;
+}
+.oneGoogle span {
+  font-size: 18px;
+  color: #1daaff;
+  margin-left: 10px;
+}
+.second {
+  font-weight: 500;
+  font-size: 12px;
+  color: #a09da1;
+  list-style: inside;
+}
+.selfElem {
+  background: #f4f4f4;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 510px;
+  height: 105px;
+}
+.selfElem p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  color: #6884a9;
+}
+.pArea {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #a09da1;
+}
+.pArea a {
+  text-decoration: underline;
+  color: #1daaff;
+}

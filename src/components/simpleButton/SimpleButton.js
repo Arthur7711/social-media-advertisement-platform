@@ -10,6 +10,7 @@ const Simplebutton = ({ COLOR, BG, text }) => {
         padding: "10px 20px",
         border: "none",
         height: 42,
+        cursor: "pointer",
       }}
     >
       {text}
