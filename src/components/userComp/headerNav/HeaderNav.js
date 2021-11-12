@@ -25,11 +25,11 @@ import user from "../../../images/girl.jpg";
 import { NavLink } from "react-router-dom";
 import { Route } from "react-router-dom";
 import talk from "../../../images/talk.png";
-import coin from "../../../images/coin.png";
 import selected from "../../../images/selected.png";
 import settings from "../../../images/settings.png";
 import question from "../../../images/question.png";
 import out from "../../../images/out.png";
+import SimpleDialogDemo from "../RingMenu";
 
 function stringToColor(string) {
   let hash = 0;
@@ -115,7 +115,6 @@ export default function PersistentDrawerLeft({ children }) {
     name: "Charles Hu",
     title: "Business Admin",
   });
-  const [coins, setCoins] = useState(0);
   const [incomingData, setIncomingData] = useState([
     {
       image: user,
@@ -532,40 +531,7 @@ export default function PersistentDrawerLeft({ children }) {
           ))}
         </List>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "100px",
-          }}
-        >
-          <img alt="coin" src={coin} />
-          <div style={{ marginLeft: "10px" }}>
-            <p
-              style={{
-                fontFamily: "Poppins",
-                fontWeight: 500,
-                fontSize: 16,
-                color: "#1DAAFF",
-                margin: 0,
-              }}
-            >
-              {coins} coin
-            </p>
-            <a
-              style={{
-                fontFamily: "Poppins",
-                fontWeight: 300,
-                fontSize: 12,
-                color: "#1DAAFF",
-                margin: 0,
-              }}
-            >
-              invite others and earb!
-            </a>
-          </div>
-        </div>
+        <SimpleDialogDemo />
       </Drawer>
       <Main open={open}>
         {navState.map((el) => (
