@@ -202,6 +202,7 @@ export default function BasicTabs() {
               borderRadius: 6,
               padding: 20,
               marginLeft: 20,
+              height: 550,
             }}
           >
             <h3 style={{ color: "#475761", fontSize: 16, marginLeft: "15px" }}>
@@ -248,6 +249,7 @@ export default function BasicTabs() {
               borderRadius: 6,
               padding: 20,
               marginLeft: 20,
+              height: 550,
             }}
           >
             <h3 style={{ color: "#475761", fontSize: 16, marginLeft: "15px" }}>
@@ -462,7 +464,14 @@ export default function BasicTabs() {
 
           <MyTable
             titles={["DESCRIPTION", "TOTAL PRICE", "PAYMENT DATE", "AMOUNT"]}
-            datas={['']}
+            datas={[
+              {
+                invoice: "INVOICE #AYN202122-584",
+                price: "$100",
+                date: "Oct 19, 2021, 12:47:42 PM",
+                downloader: "",
+              },
+            ]}
           />
         </div>
       </TabPanel>
