@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SimpleInput({ plac, WIDTH }) {
+export default function SimpleInput({ plac, WIDTH, COLOR }) {
   return (
     <input
       placeholder={plac}
@@ -11,7 +11,8 @@ export default function SimpleInput({ plac, WIDTH }) {
         height: 40,
         width: WIDTH,
         margin: "10px",
-        paddingLeft:15
+        paddingLeft: 15,
+        color: COLOR,
       }}
     />
   );

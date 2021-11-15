@@ -1,0 +1,9 @@
+.my {
+  display: grid;
+  grid-template-columns: 4fr 2fr 3fr 3fr;
+}
+.p {
+  color: #a09da1;
+  font-size: 14;
+  margin-left: 20px;
+}
