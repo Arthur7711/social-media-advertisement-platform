@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const steps = [
@@ -26,9 +25,19 @@ export default function HorizontalNonLinearStepper() {
       <Stepper nonLinear activeStep={activeStep}>
         {steps.map((label, index) => (
           <Step key={label} completed={completed[index]}>
-            <StepButton color="inherit" onClick={handleStep(index)}>
-              {label}
-            </StepButton>
+            <div style={{ cursor: "pointer" }} onClick={handleStep(index)}>
+              <p
+                style={{
+                  background: "#F4F4F4",
+                  borderRadius: 6,
+                  color: "#C4C4CA",
+                  padding: "10px 5px",
+                }}
+              >
+                {label}
+              </p>
+              <StepButton color="inherit"></StepButton>
+            </div>
           </Step>
         ))}
       </Stepper>
