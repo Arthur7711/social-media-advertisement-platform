@@ -1,6 +1,6 @@
 import React from "react";
 
-const Simplebutton = ({ COLOR, BG, text }) => {
+const Simplebutton = ({ COLOR, BG, text, WIDTH }) => {
   return (
     <button
       style={{
@@ -11,6 +11,7 @@ const Simplebutton = ({ COLOR, BG, text }) => {
         border: "none",
         height: 42,
         cursor: "pointer",
+        width: WIDTH,
       }}
     >
       {text}

@@ -1,6 +1,8 @@
 import React from "react";
 import Simplebutton from "../simpleButton/SimpleButton";
 import styles from "./MyTable.module.css";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import { IconButton } from "@mui/material";
 
 export default function MyTable({ titles, datas }) {
   return (
@@ -23,7 +25,7 @@ export default function MyTable({ titles, datas }) {
               border: "1px solid #F4F4F4",
             }}
           >
-            {el.invoice}
+            {el.invoice || el.name}
           </div>
           <div
             style={{
@@ -36,7 +38,7 @@ export default function MyTable({ titles, datas }) {
               border: "1px solid #F4F4F4",
             }}
           >
-            {el.price}
+            {el.price || el.email}
           </div>
           <div
             style={{
@@ -49,7 +51,7 @@ export default function MyTable({ titles, datas }) {
               border: "1px solid #F4F4F4",
             }}
           >
-            {el.date}
+            {el.date || el.business}
           </div>
           <div
             style={{
@@ -62,7 +64,13 @@ export default function MyTable({ titles, datas }) {
               border: "1px solid #F4F4F4",
             }}
           >
-            <Simplebutton COLOR="#fff" BG="#1DAAFF" text="Download pdf" />
+            {el.downloader ? (
+              <Simplebutton COLOR="#fff" BG="#1DAAFF" text="Download pdf" />
+            ) : (
+              <IconButton>
+                <HighlightOffIcon sx={{ color: "red" }} />
+              </IconButton>
+            )}
           </div>
         </>
       ))}

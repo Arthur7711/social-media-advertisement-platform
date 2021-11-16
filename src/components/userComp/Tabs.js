@@ -53,6 +53,15 @@ export default function BasicTabs() {
     },
   ]);
 
+  const [subAcc, setSubAcc] = React.useState([
+    {
+      name: "Cindy Zhu",
+      email: "qhsz_nz@hotmail.com",
+      business: "1 Businesses Assigned",
+      downloader: false,
+    },
+  ]);
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -78,7 +87,7 @@ export default function BasicTabs() {
             alignItems: "center",
           }}
         >
-          <h2>GENERAL SETTINGS </h2>
+          <h3 style={{ color: "#475761" }}>GENERAL SETTINGS </h3>
           <p
             style={{
               fontWeight: 500,
@@ -469,14 +478,102 @@ export default function BasicTabs() {
                 invoice: "INVOICE #AYN202122-584",
                 price: "$100",
                 date: "Oct 19, 2021, 12:47:42 PM",
-                downloader: "",
+                downloader: true,
               },
             ]}
           />
         </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        SUB ACCOUNTS
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
+          <h3 style={{ color: "#475761" }}>SUB ACCOUNTS </h3>
+          <p
+            style={{
+              fontWeight: 500,
+              fontSize: 12,
+              color: "#A09DA1",
+              marginLeft: 20,
+            }}
+          >
+            Invite new sub accounts and manage already existing ones.
+          </p>
+        </div>
+        <div
+          style={{
+            border: "1px solid #DDE1EB",
+            boxSizing: " border-box",
+            borderRadius: 6,
+          }}
+        >
+          <h2 style={{ color: "#475761", marginLeft: 15 }}>
+            Invite a sub account
+          </h2>
+          <p style={{ color: "#1DAAFF", fontSize: 12, marginLeft: 15 }}>
+            The sub account you are creating will get an email with login
+            details.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+            }}
+          >
+            <SimpleInput plac="Employee Full Name" WIDTH="400px" />
+            <SimpleInput plac="Email address" WIDTH="400px" />
+            <Simplebutton
+              COLOR="#fff"
+              BG="#1DAAFF"
+              text="INVITE"
+              WIDTH="400px"
+            />
+          </div>
+          <hr style={{ color: "#DDE1EB" }} />
+          <div>
+            <h2 style={{ color: "#475761", marginLeft: 15 }}>
+              Existing Sub Accounts
+            </h2>
+            <p style={{ color: "#A09DA1", fontSize: 12, marginLeft: 15 }}>
+              Here you can see your sub accounts, edit business accesses and
+              delete them when needed.
+            </p>
+          </div>
+          <MyTable
+            titles={["FULL NAME", "E-MAIL ADDRESS", "BUSINESS", "#"]}
+            datas={subAcc}
+          />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+            }}
+          >
+            <p style={{ color: "#475761", fontWeight: 500 }}>
+              Total Sub Accounts:
+            </p>
+            <div
+              style={{
+                width: 32,
+                height: 32,
+                borderRadius: "50%",
+                background: "#F4F4F4",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "#475761",
+              }}
+            >
+              {subAcc.length}
+            </div>
+          </div>
+        </div>
       </TabPanel>
     </Box>
   );
