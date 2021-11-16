@@ -287,7 +287,7 @@ export default function PersistentDrawerLeft({ children }) {
     setIsOpen(false);
   };
 
-  const activeClasses = { fill: "#005792", color: "#005792" };
+  // const activeClasses = { fill: "#005792", color: "#005792" };
   return (
     <Box
       sx={{
@@ -513,7 +513,7 @@ export default function PersistentDrawerLeft({ children }) {
           {navState.map((item, index) => (
             <NavLink
               to={`/${item.text.toLowerCase()}`}
-              activeClassName={activeClasses}
+              // activeClassName={activeClasses}
             >
               <ListItem
                 button

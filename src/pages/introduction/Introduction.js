@@ -1,12 +1,13 @@
 import React from "react";
 import PersistentDrawerLeft from "../../components/userComp/headerNav/HeaderNav";
+import HorizontalNonLinearStepper from "../../components/userComp/Stepper";
 import styles from "./Introduction.module.css";
 
 const Introduction = () => {
   return (
     <PersistentDrawerLeft>
       <div className={styles.int}>
-      <div className={styles.head}>
+        <div className={styles.head}>
           <svg
             width="20"
             height="18"
@@ -24,6 +25,7 @@ const Introduction = () => {
         <p className={styles.p}>
           See your business(es), edit them and create new ones.
         </p>
+        <HorizontalNonLinearStepper />
       </div>
     </PersistentDrawerLeft>
   );
