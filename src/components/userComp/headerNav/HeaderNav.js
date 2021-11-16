@@ -22,8 +22,7 @@ import arrow from "../../../images/Vector.png";
 import Simplebutton from "../../simpleButton/SimpleButton";
 import jingle from "../../../images/jingle.png";
 import user from "../../../images/girl.jpg";
-import { NavLink } from "react-router-dom";
-import { Route } from "react-router-dom";
+import { NavLink, Route, useHistory } from "react-router-dom";
 import talk from "../../../images/talk.png";
 import selected from "../../../images/selected.png";
 import settings from "../../../images/settings.png";
@@ -110,6 +109,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export default function PersistentDrawerLeft({ children }) {
+  let history = useHistory()
+
   const [userInfo, setUserInfo] = useState({
     image: user,
     name: "Charles Hu",
@@ -625,6 +626,7 @@ export default function PersistentDrawerLeft({ children }) {
                 paddingBottom: 10,
                 cursor: "pointer",
               }}
+              onClick={()=>history.push('/settings')}
             >
               <img src={settings} alt="settings" />
               <span style={{ color: "#575757", marginLeft: 10 }}>Settings</span>
@@ -639,6 +641,7 @@ export default function PersistentDrawerLeft({ children }) {
                 margin: "20px 0",
                 cursor: "pointer",
               }}
+              onClick={()=>history.push('/help')}
             >
               <img src={question} alt="question" />
               <span style={{ color: "#575757", marginLeft: 10 }}>
@@ -654,6 +657,7 @@ export default function PersistentDrawerLeft({ children }) {
                 paddingBottom: 10,
                 cursor: "pointer",
               }}
+              onClick={()=>history.push('/login')}
             >
               <img src={out} alt="logout" />
               <span style={{ color: "#575757", marginLeft: 10 }}>Logout</span>
