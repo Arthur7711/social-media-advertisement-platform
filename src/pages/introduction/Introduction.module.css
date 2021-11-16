@@ -1,0 +1,15 @@
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head h1 {
+  color: #005792;
+  margin-left: 15px;
+}
+.int .p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+  text-align: center;
+}
