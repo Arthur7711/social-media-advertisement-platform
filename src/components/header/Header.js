@@ -35,7 +35,6 @@ const Header = () => {
             />
           </svg>
           <select name="cars" id="cars">
-            <option value=""></option>
             <option value="en">en</option>
             <option value="ru">ru</option>
           </select>
