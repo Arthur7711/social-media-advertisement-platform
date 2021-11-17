@@ -25,7 +25,7 @@ function App() {
       <Route exact path="/businesses" component={Businesses} />
       <Route exact path="/accounts" component={Accounts} />
       <Route exact path="/introduction" component={Introduction} />
-      <Route exact path="/textgenerator" component={Textgenerator} />
+      {/* <Route exact path="/textgenerator" component={Textgenerator} /> */}
       <Route exact path="/settings" component={Settings} />
     </BrowserRouter>
   );
