@@ -41,8 +41,27 @@ export default function HorizontalNonLinearStepper() {
           </Step>
         ))}
       </Stepper>
-      <div>
-        <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+      <div
+        style={{
+          marginTop: 50,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <video
+          width="900"
+          height="500"
+          controls
+          style={{
+            background: "#FFFFFF",
+            boxShadow: "0px 4px 28px rgba(101, 101, 101, 0.05)",
+            borderRadius: 6,
+          }}
+        >
+          <source src={`/Videos/video${activeStep + 1}.mp4`} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </Box>
   );
