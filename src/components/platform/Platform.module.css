@@ -1,0 +1,86 @@
+.platform {
+  padding: 0 5em;
+}
+.allPlatforms {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.plat {
+  background: #f4f4f4;
+  width: 300px;
+  padding: 10px;
+}
+.fbInst {
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f4f4f4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px 10px;
+  background-color: #fff;
+}
+.one span {
+  font-size: 18px;
+  color: #1daaff;
+  margin-left: 10px;
+}
+.selectArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select {
+  background: #1daaff;
+  color: #fff;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.option {
+  border-radius: 6px;
+  border: none;
+  background: #e7e7e7;
+  height: 40px;
+  outline: none;
+  color: #a09da1;
+  line-height: 40px;
+  margin: 5px;
+}
+.oneGoogle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #f4f4f4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px 10px;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.oneGoogle span {
+  font-size: 18px;
+  color: #1daaff;
+  margin-left: 10px;
+}
+.textArea {
+  background: #f4f4f4;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a09da1;
+  margin: 20px 5px;
+}

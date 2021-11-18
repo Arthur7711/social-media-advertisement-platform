@@ -2,6 +2,7 @@ import React from "react";
 import CreateStepper from "../../components/userComp/CreateStepper";
 import PersistentDrawerLeft from "../../components/userComp/headerNav/HeaderNav";
 import styles from "./CreateAdd.module.css";
+import Platform from "../../components/platform/Platform";
 
 const Createadd = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -48,7 +49,7 @@ const Createadd = () => {
             setActiveStep(el);
           }}
         >
-          <p>hghsdabxsx521n</p>
+          <Platform />
         </CreateStepper>
       </div>
     </PersistentDrawerLeft>

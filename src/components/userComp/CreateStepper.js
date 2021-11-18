@@ -12,7 +12,7 @@ const steps = [
   "Review & Publish",
 ];
 
-export default function CreateStepper({children,activeStep,setActiveStep}) {
+export default function CreateStepper({ children, activeStep, setActiveStep }) {
   const [completed, setCompleted] = React.useState({});
 
   const handleStep = (step) => () => {
@@ -43,12 +43,9 @@ export default function CreateStepper({children,activeStep,setActiveStep}) {
       <div
         style={{
           marginTop: 50,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
-        {activeStep + 1}
+        <p>{activeStep + 1}</p>
         {children}
       </div>
     </Box>
