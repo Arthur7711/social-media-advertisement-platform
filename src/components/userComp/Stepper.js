@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
-import Typography from "@mui/material/Typography";
 
 const steps = [
   "What is ADCLOUD?",
@@ -28,9 +27,9 @@ export default function HorizontalNonLinearStepper() {
             <div style={{ cursor: "pointer" }} onClick={handleStep(index)}>
               <p
                 style={{
-                  background: "#F4F4F4",
+                  background: activeStep===index ? "#1DAAFF" : "#F4F4F4",
                   borderRadius: 6,
-                  color: "#C4C4CA",
+                  color: activeStep===index ? "#fff" :"#C4C4CA",
                   padding: "10px 5px",
                 }}
               >
