@@ -459,7 +459,8 @@ export default function PersistentDrawerLeft({ children }) {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <div
+        
+        <div onClick={()=>history.push('/createadd')}
           style={{
             background:
               "linear-gradient(92.21deg, #005792 6.65%, #04118A 106.65%)",
@@ -487,6 +488,7 @@ export default function PersistentDrawerLeft({ children }) {
             Create an AD
           </span>
         </div>
+        
         <List>
           {navState.map((item, index) => (
             <NavLink to={`/${item.text.toLowerCase()}`}>
