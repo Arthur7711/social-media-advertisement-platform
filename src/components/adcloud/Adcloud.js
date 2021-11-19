@@ -1,5 +1,6 @@
 import React from "react";
 import Myblocks from "../blockTypes/MyBlocks";
+import SimpleInput from "../simpleInput/SimpleInput";
 import styles from "./Adcloud.module.css";
 
 const Adcloud = () => {
@@ -29,12 +30,21 @@ const Adcloud = () => {
           setActiveEl={(el) => setActiveEl(el)}
         />
       </div>
-      <main className={styles.mainParth}>
-        <h2 className={styles.h}>Manual Adcloud Setup</h2>
-        <div className={styles.location}>
-          <h2 className={styles.h}>Location</h2>
-        </div>
-      </main>
+      <div className={styles.choice}>
+        <main className={styles.mainParth}>
+          <h2 className={styles.h}>Manual Adcloud Setup</h2>
+          <div className={styles.location}>
+            <h2 className={styles.h}>Location</h2>
+          </div>
+          <div className={styles.opt}>
+            <select name="types">
+              <option value="Includes">Includes</option>
+              <option value="exclude">exclude</option>
+            </select>
+            <SimpleInput plac="Type the search" WIDTH="88%" />
+          </div>
+        </main>
+      </div>
     </div>
   );
 };
