@@ -1,0 +1,14 @@
+.myblock {
+  padding: 50px 10px 20px 10px;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.myblock h3 {
+  font-size: 14px;
+  text-align: center;
+}
+.myblock p {
+  font-size: 12px;
+  text-align: center;
+}

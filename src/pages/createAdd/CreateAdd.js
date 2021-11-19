@@ -3,6 +3,7 @@ import CreateStepper from "../../components/userComp/CreateStepper";
 import PersistentDrawerLeft from "../../components/userComp/headerNav/HeaderNav";
 import styles from "./CreateAdd.module.css";
 import Platform from "../../components/platform/Platform";
+import Objective from "../../components/objective/Objective";
 
 const Createadd = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -49,7 +50,12 @@ const Createadd = () => {
             setActiveStep(el);
           }}
         >
-          <Platform />
+          <main style={{ display: activeStep + 1 === 1 ? "block" : "none" }}>
+            <Platform />
+          </main>
+          <main style={{ display: activeStep + 1 === 2 ? "block" : "none" }}>
+            <Objective />
+          </main>
         </CreateStepper>
       </div>
     </PersistentDrawerLeft>
