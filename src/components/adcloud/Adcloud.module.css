@@ -1,0 +1,23 @@
+.choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainParth {
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px 5px;
+}
+.h {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+}
+.location {
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px;
+}

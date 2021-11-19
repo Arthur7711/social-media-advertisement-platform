@@ -4,6 +4,7 @@ import PersistentDrawerLeft from "../../components/userComp/headerNav/HeaderNav"
 import styles from "./CreateAdd.module.css";
 import Platform from "../../components/platform/Platform";
 import Objective from "../../components/objective/Objective";
+import Adcloud from "../../components/adcloud/Adcloud";
 
 const Createadd = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -55,6 +56,12 @@ const Createadd = () => {
           </main>
           <main style={{ display: activeStep + 1 === 2 ? "block" : "none" }}>
             <Objective />
+          </main>
+          <main style={{ display: activeStep + 1 === 3 ? "block" : "none" }}>
+            <Adcloud />
+          </main>
+          <main style={{ display: activeStep + 1 === 4 ? "block" : "none" }}>
+            <Adcloud />
           </main>
         </CreateStepper>
       </div>
