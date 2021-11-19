@@ -45,7 +45,6 @@ export default function CreateStepper({ children, activeStep, setActiveStep }) {
           marginTop: 50,
         }}
       >
-        <p>{activeStep + 1}</p>
         {children}
       </div>
     </Box>
