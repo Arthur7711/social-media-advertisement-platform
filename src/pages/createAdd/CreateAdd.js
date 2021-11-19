@@ -5,6 +5,7 @@ import styles from "./CreateAdd.module.css";
 import Platform from "../../components/platform/Platform";
 import Objective from "../../components/objective/Objective";
 import Adcloud from "../../components/adcloud/Adcloud";
+import Adtype from "../../components/adType/AdType";
 
 const Createadd = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -61,7 +62,7 @@ const Createadd = () => {
             <Adcloud />
           </main>
           <main style={{ display: activeStep + 1 === 4 ? "block" : "none" }}>
-            <Adcloud />
+            <Adtype />
           </main>
         </CreateStepper>
       </div>
