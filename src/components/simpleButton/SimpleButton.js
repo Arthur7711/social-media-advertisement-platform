@@ -1,6 +1,6 @@
 import React from "react";
 
-const Simplebutton = ({ COLOR, BG, text, WIDTH }) => {
+const Simplebutton = ({ COLOR, BG, text, WIDTH, BORDERCOLOR }) => {
   return (
     <button
       style={{
@@ -8,7 +8,7 @@ const Simplebutton = ({ COLOR, BG, text, WIDTH }) => {
         color: COLOR,
         background: BG,
         padding: "10px 20px",
-        border: "none",
+        border: BORDERCOLOR ? `1px solid ${BORDERCOLOR}` : "none",
         height: 42,
         cursor: "pointer",
         width: WIDTH,
