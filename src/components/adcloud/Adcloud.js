@@ -1,6 +1,7 @@
 import React from "react";
 import Myblocks from "../blockTypes/MyBlocks";
 import SimpleInput from "../simpleInput/SimpleInput";
+import RangeSlider from "../userComp/myRange";
 import styles from "./Adcloud.module.css";
 
 const Adcloud = () => {
@@ -43,6 +44,24 @@ const Adcloud = () => {
             </select>
             <SimpleInput plac="Type the search" WIDTH="88%" />
           </div>
+          <div className={styles.choice}>
+            <div className={styles.location}>
+              <p className={styles.p}>Age Range</p>
+              <RangeSlider />
+            </div>
+            <div className={styles.location}>
+              <p className={styles.p}>Gender</p>
+              <div className={styles.labsArea}>
+                <label className={styles.labs}>
+                  <input type="checkbox" /> Male
+                </label>
+                <label className={styles.labs}>
+                  <input type="checkbox" /> Female
+                </label>
+              </div>
+            </div>
+          </div>
+          <p className={styles.p}>Detailed Targeting</p>
         </main>
       </div>
     </div>

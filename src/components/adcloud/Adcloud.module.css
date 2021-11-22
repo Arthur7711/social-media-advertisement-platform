@@ -21,6 +21,7 @@
   box-sizing: border-box;
   border-radius: 6px;
   padding: 5px;
+  margin: 0 10px;
 }
 .mainParth {
   width: 800px;
@@ -28,4 +29,23 @@
 .opt select {
   border: none;
   color: #a09da1;
+}
+.p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+  text-align: center;
+}
+.labs {
+  color: #a09da1;
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px;
+}
+.labsArea{
+  margin-bottom: 15px;
+}
+.labsArea > * {
+  margin: 0 10px ;
 }
