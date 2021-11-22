@@ -6,6 +6,7 @@ import Platform from "../../components/platform/Platform";
 import Objective from "../../components/objective/Objective";
 import Adcloud from "../../components/adcloud/Adcloud";
 import Adtype from "../../components/adType/AdType";
+import Reviewpublish from "../../components/reviewPublish/ReviewPublish";
 
 const Createadd = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -63,6 +64,9 @@ const Createadd = () => {
           </main>
           <main style={{ display: activeStep + 1 === 4 ? "block" : "none" }}>
             <Adtype />
+          </main>
+          <main style={{ display: activeStep + 1 === 5 ? "block" : "none" }}>
+            <Reviewpublish />
           </main>
         </CreateStepper>
       </div>

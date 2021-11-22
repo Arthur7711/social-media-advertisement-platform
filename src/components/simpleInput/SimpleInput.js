@@ -1,8 +1,9 @@
 import React from "react";
 
-export default function SimpleInput({ plac, WIDTH, COLOR }) {
+export default function SimpleInput({ plac, WIDTH, COLOR, TYPE }) {
   return (
     <input
+      type={TYPE ? TYPE : "text"}
       placeholder={plac}
       style={{
         border: "1px solid #F4F4F4",

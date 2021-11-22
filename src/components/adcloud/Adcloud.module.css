@@ -8,6 +8,7 @@
   box-sizing: border-box;
   border-radius: 6px;
   padding: 10px 5px;
+  width: 800px;
 }
 .h {
   margin: 10px 0;
@@ -22,9 +23,6 @@
   border-radius: 6px;
   padding: 5px;
   margin: 0 10px;
-}
-.mainParth {
-  width: 800px;
 }
 .opt select {
   border: none;
@@ -43,9 +41,9 @@
   border-radius: 6px;
   padding: 5px;
 }
-.labsArea{
+.labsArea {
   margin-bottom: 15px;
 }
 .labsArea > * {
-  margin: 0 10px ;
+  margin: 0 10px;
 }

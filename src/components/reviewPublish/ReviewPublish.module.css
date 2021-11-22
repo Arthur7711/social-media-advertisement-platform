@@ -1,0 +1,53 @@
+.choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainParth {
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px 5px;
+  width: 800px;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  justify-items: center;
+}
+.right {
+  border-left: 1px solid #dde1eb;
+  padding: 5px 10px;
+}
+.p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+  text-align: center;
+}
+.thisSpan {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+}
+.lab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dde1eb;
+  padding: 3px;
+  border-radius: 6px;
+  color: #a09da1;
+}
+.lab input {
+  outline: none;
+  border: none;
+  height: 40px;
+}
+.btnArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.btnArea > * {
+  margin: 0 25px 0 50px;
+}
