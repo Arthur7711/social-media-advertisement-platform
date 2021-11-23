@@ -3,6 +3,7 @@ import Myblocks from "../blockTypes/MyBlocks";
 import SimpleInput from "../simpleInput/SimpleInput";
 import RangeSlider from "../userComp/myRange";
 import styles from "./Adcloud.module.css";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 const Adcloud = () => {
   const [activeEl, setActiveEl] = React.useState(0);
@@ -62,6 +63,15 @@ const Adcloud = () => {
             </div>
           </div>
           <p className={styles.p}>Detailed Targeting</p>
+          <div className={styles.beet}>
+            <h3 className={styles.ccc}>Youth</h3>
+            <div className={styles.choice}>
+              <h3 style={{ marginRight: 10, color: "#A09DA1", fontSize: 16 }}>
+                Custom adcloud
+              </h3>
+              <HighlightOffIcon color="disabled" />
+            </div>
+          </div>
         </main>
       </div>
     </div>

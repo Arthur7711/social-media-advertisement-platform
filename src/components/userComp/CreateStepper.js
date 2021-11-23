@@ -7,7 +7,7 @@ import StepButton from "@mui/material/StepButton";
 const steps = [
   "Platform",
   "Objective",
-  "Audience",
+  "Adcloud",
   "Ad Type",
   "Review & Publish",
 ];

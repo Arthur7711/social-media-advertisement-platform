@@ -47,3 +47,15 @@
 .labsArea > * {
   margin: 0 10px;
 }
+.beet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: #f4f4f4;
+  border-radius: 6px;
+}
+.ccc {
+  color: #c4c4c4;
+  font-size: 16px;
+}
