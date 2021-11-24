@@ -24,6 +24,13 @@
   padding: 5px;
   margin: 0 10px;
 }
+.opt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  margin: 10px 0;
+}
 .opt select {
   border: none;
   color: #a09da1;
@@ -58,4 +65,32 @@
 .ccc {
   color: #c4c4c4;
   font-size: 16px;
+}
+.txt {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+}
+.searchPart {
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.searchCombine {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px 5px 5px 50px;
+  margin: 0;
+}
+.underBTN {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

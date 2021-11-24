@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Features from "./pages/features/Features";
 import Home from "./pages/home/Home";
