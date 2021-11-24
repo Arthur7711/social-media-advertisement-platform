@@ -1,0 +1,6 @@
+.blueTitles {
+  color: #1daaff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
