@@ -4,3 +4,62 @@
   align-items: center;
   justify-content: flex-start;
 }
+.blueTitles > * {
+  margin-right: 10px;
+}
+.subInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.subInfo > * {
+  margin-right: 10px;
+}
+.subInfo h5 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #a09da1;
+}
+.subInfo span {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a09da1;
+}
+.choise {
+  border: 1px solid #dde1eb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 20px 20px 10px 20px;
+}
+.age {
+  width: 250px;
+  height: 110px;
+  background: linear-gradient(
+    88.56deg,
+    rgba(0, 87, 146, 0.35) -23.12%,
+    rgba(0, 87, 146, 0.4) -23.12%,
+    #2fabff -23.11%,
+    #04118a 104.28%
+  );
+  border-radius: 6px;
+  padding: 10px;
+}
+.age h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px;
+}
+.age select {
+  background: #ffffff;
+  border-radius: 6px;
+  color: #a09da1;
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+}
