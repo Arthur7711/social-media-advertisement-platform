@@ -1,0 +1,24 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topBtn {
+  display: flex;
+  align-items: center;
+}
+.topBtn > * {
+  margin-right: 10px;
+}
+.searchPart {
+  position: relative;
+  border-radius: 6px;
+}
+.searchPart > input {
+  border: none;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  width: 350px;
+  height: 45px;
+  padding-left: 15px;
+}

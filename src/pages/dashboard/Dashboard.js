@@ -5,6 +5,7 @@ import fb from "../../images/bfb.png";
 import insta from "../../images/binsta.png";
 import Simplebutton from "../../components/simpleButton/SimpleButton";
 import MySelect from "../../components/userComp/MySelect";
+import UniqueTable from "../../components/uniqueTable/UniqueTable";
 
 const Dashboard = () => {
   return (
@@ -117,6 +118,9 @@ const Dashboard = () => {
             See your all campaigns and drafts, turn them on or off and dive in
             to details.
           </span>
+        </div>
+        <div>
+          <UniqueTable />
         </div>
       </div>
     </PersistentDrawerLeft>
