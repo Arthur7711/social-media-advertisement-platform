@@ -3,6 +3,11 @@ import styles from "./UniqueTable.module.css";
 import Simplebutton from "../simpleButton/SimpleButton";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton } from "@mui/material";
+import Checkbox from "@mui/material/Checkbox";
+import MySelect from "../userComp/MySelect";
+import changes from "../../images/changes.png";
+
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const Uniquetable = () => {
   return (
@@ -25,9 +30,53 @@ const Uniquetable = () => {
           </IconButton>
         </div>
       </div>
-      <div className={styles.table}>
-        
-      </div>
+      <main className={styles.table}>
+        <div className={styles.headTable}>
+          <Checkbox {...label} defaultChecked color="default" />
+          <MySelect
+            title="Status"
+            options={["someting"]}
+            BG="#F4F4F4"
+            COLOR="#A09DA1"
+          />
+          <Simplebutton text="Name" BG="#F4F4F4" COLOR="#A09DA1" />
+          <Simplebutton text="Details" BG="#F4F4F4" COLOR="#A09DA1" />
+          <Simplebutton text="Budget" BG="#F4F4F4" COLOR="#A09DA1" />
+          <MySelect
+            title="Result"
+            options={["someting"]}
+            BG="#F4F4F4"
+            COLOR="#A09DA1"
+          />
+          <MySelect
+            title="Impressions"
+            options={["someting"]}
+            BG="#F4F4F4"
+            COLOR="#A09DA1"
+          />
+          <MySelect
+            title="Clicks"
+            options={["someting"]}
+            BG="#F4F4F4"
+            COLOR="#A09DA1"
+          />
+          <MySelect
+            title="CPC"
+            options={["someting"]}
+            BG="#F4F4F4"
+            COLOR="#A09DA1"
+          />
+          <MySelect
+            title="Spend"
+            options={["someting"]}
+            BG="#F4F4F4"
+            COLOR="#A09DA1"
+          />
+          <div className={styles.imgBox}>
+            <img alt="changeMaker" src={changes} />
+          </div>
+        </div>
+      </main>
     </main>
   );
 };

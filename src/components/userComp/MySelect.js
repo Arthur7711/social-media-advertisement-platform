@@ -13,13 +13,17 @@ export default function MySelect({ title, options, BG, COLOR, WIDTH }) {
   };
 
   return (
-    <Box style={{ borderRadius: 6 }} sx={{ minWidth: WIDTH ? WIDTH : 120 }}>
+    <Box
+      style={{ borderRadius: 6, height: "40px" }}
+      sx={{ minWidth: WIDTH ? WIDTH : 120 }}
+    >
       <FormControl
         fullWidth
         style={{
           background: BG,
           color: COLOR ? COLOR : "#fff",
           borderRadius: 6,
+          height: "40px",
         }}
       >
         <InputLabel style={{ fontSize: "14px" }} id={title}>
@@ -31,6 +35,7 @@ export default function MySelect({ title, options, BG, COLOR, WIDTH }) {
           value={age}
           label="Age"
           onChange={handleChange}
+          style={{ height: "40px" }}
         >
           {options && options.map((el) => <MenuItem value={el}>{el}</MenuItem>)}
         </Select>

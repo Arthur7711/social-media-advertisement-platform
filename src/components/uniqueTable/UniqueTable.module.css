@@ -22,3 +22,18 @@
   height: 45px;
   padding-left: 15px;
 }
+.table{
+  margin-top: 50px;
+}
+.headTable {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.headTable > * {
+  margin: 5px;
+}
+.imgBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
