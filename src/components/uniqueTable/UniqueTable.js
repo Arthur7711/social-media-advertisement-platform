@@ -10,6 +10,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import Pagination from "../userComp/Pagination";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -299,6 +300,7 @@ const Uniquetable = () => {
             </div>
           </div>
         ))}
+        <Pagination />
       </main>
     </main>
   );
