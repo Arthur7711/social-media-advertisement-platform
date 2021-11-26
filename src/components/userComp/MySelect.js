@@ -15,7 +15,7 @@ export default function MySelect({ title, options, BG, COLOR, WIDTH }) {
   return (
     <Box
       style={{ borderRadius: 6, height: "40px" }}
-      sx={{ minWidth: WIDTH ? WIDTH : 120 }}
+      sx={{ width: WIDTH ? WIDTH : 120 }}
     >
       <FormControl
         fullWidth
