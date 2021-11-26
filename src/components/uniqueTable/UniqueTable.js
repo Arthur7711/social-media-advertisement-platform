@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./UniqueTable.module.css";
 import Simplebutton from "../simpleButton/SimpleButton";
 import SearchIcon from "@mui/icons-material/Search";
@@ -65,6 +65,58 @@ const IOSSwitch = styled((props) => (
 }));
 
 const Uniquetable = () => {
+  const [portalData, setPortalData] = useState([
+    {
+      id: 1,
+      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
+      budget: "NZ$20.00 Daily",
+      result: "-",
+      impressions: "-",
+      clicks: "-",
+      CPC: "-",
+      spend: "-",
+    },
+    {
+      id: 2,
+      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
+      budget: "NZ$20.00 Daily",
+      result: "-",
+      impressions: "-",
+      clicks: "-",
+      CPC: "-",
+      spend: "-",
+    },
+    {
+      id: 3,
+      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
+      budget: "NZ$20.00 Daily",
+      result: "-",
+      impressions: "-",
+      clicks: "-",
+      CPC: "-",
+      spend: "-",
+    },
+    {
+      id: 4,
+      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
+      budget: "NZ$20.00 Daily",
+      result: "-",
+      impressions: "-",
+      clicks: "-",
+      CPC: "-",
+      spend: "-",
+    },
+    {
+      id: 5,
+      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
+      budget: "NZ$20.00 Daily",
+      result: "-",
+      impressions: "-",
+      clicks: "-",
+      CPC: "-",
+      spend: "-",
+    },
+  ]);
   return (
     <main>
       <div className={styles.top}>
@@ -167,84 +219,86 @@ const Uniquetable = () => {
             <img alt="changeMaker" src={changes} />
           </div>
         </div>
-        <div className={styles.bodyTable}>
-          <div
-            style={{ width: 60, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            <Checkbox {...label} defaultChecked color="default" />
-          </div>
-          <div
-            style={{ width: 130, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            <FormControlLabel
-              control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-              label=""
-            />
-          </div>
-          <p
-            style={{ width: 250, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            Ongoing Conversions Promotion http://www.empirefurniture.co.nz/
-          </p>
-          <div
-            style={{ width: 130, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            <svg
-              width="15"
-              height="21"
-              viewBox="0 0 15 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+        {portalData.map((el) => (
+          <div key={el.id} className={styles.bodyTable}>
+            <div
+              style={{ width: 60, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
             >
-              <rect y="12" width="3" height="9" fill="#1DAAFF" />
-              <rect x="6" y="7" width="3" height="14" fill="#1DAAFF" />
-              <rect x="12" width="3" height="21" fill="#1DAAFF" />
-            </svg>
+              <Checkbox {...label} defaultChecked color="default" />
+            </div>
+            <div
+              style={{ width: 130, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              <FormControlLabel
+                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
+                label=""
+              />
+            </div>
+            <p
+              style={{ width: 250, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              {el.name}
+            </p>
+            <div
+              style={{ width: 130, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              <svg
+                width="15"
+                height="21"
+                viewBox="0 0 15 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect y="12" width="3" height="9" fill="#1DAAFF" />
+                <rect x="6" y="7" width="3" height="14" fill="#1DAAFF" />
+                <rect x="12" width="3" height="21" fill="#1DAAFF" />
+              </svg>
+            </div>
+            <p
+              style={{ width: 130, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              {el.budget}
+            </p>
+            <p
+              style={{ width: 130, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              {el.result}
+            </p>
+            <p
+              style={{ width: 130, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              {el.impressions}
+            </p>
+            <p
+              style={{ width: 130, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              {el.clicks}
+            </p>
+            <p
+              style={{ width: 130, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              {el.CPC}
+            </p>
+            <p
+              style={{ width: 130, borderRight: "1px solid #dde1eb" }}
+              className={styles.p}
+            >
+              {el.spend}
+            </p>
+            <div style={{ width: 35 }} className={styles.p}>
+              <MoreVertIcon color="primary" />
+            </div>
           </div>
-          <p
-            style={{ width: 130, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            NZ$20.00 Daily
-          </p>
-          <p
-            style={{ width: 130, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            -
-          </p>
-          <p
-            style={{ width: 130, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            -
-          </p>
-          <p
-            style={{ width: 130, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            -
-          </p>
-          <p
-            style={{ width: 130, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            -
-          </p>
-          <p
-            style={{ width: 130, borderRight: "1px solid #dde1eb" }}
-            className={styles.p}
-          >
-            -
-          </p>
-          <div style={{ width: 35 }} className={styles.p}>
-            <MoreVertIcon color="primary" />
-          </div>
-        </div>
+        ))}
       </main>
     </main>
   );
