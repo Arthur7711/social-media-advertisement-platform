@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Bluearea from "../../components/blueArea/BlueArea";
 import Smallcard from "../../components/cards/smallCard/SmallCard";
 import Header from "../../components/header/Header";
@@ -11,6 +11,25 @@ import Workersarea from "../../components/workersArea/WorkersArea";
 import styles from "./Home.module.css";
 
 const Home = () => {
+  const [selectedId, setSelectedId] = useState(0);
+  const types = [
+    {
+      title: "Create",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+    },
+    {
+      title: "Discover",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+    },
+    {
+      title: "Understand",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+    },
+    {
+      title: "Automate",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
+    },
+  ];
   return (
     <>
       <Header />
@@ -30,7 +49,21 @@ const Home = () => {
         <div className={styles.rounds}></div>
       </div>
       <div className={styles.secMidArea}>
-        <Smallcard
+        {types.map((el, i) => (
+          <Smallcard
+            key={i}
+            title={el.title}
+            description={el.desc}
+            BGCOLOR={
+              selectedId === i &&
+              "linear-gradient(92.21deg, #005792 6.65%, #04118a 106.65%)"
+            }
+            COLOR={selectedId === i && "#fff"}
+            myState={i}
+            workState={(elem) => setSelectedId(elem)}
+          />
+        ))}
+        {/* <Smallcard
           title="Create"
           description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum "
           BGCOLOR="linear-gradient(92.21deg, #005792 6.65%, #04118a 106.65%)"
@@ -50,7 +83,7 @@ const Home = () => {
           title="Automate"
           description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum "
           COLOR="#005792"
-        />
+        /> */}
       </div>
       <Mainarea />
       <Bluearea />
