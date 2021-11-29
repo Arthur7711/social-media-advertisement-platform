@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Long from "../../components/cards/longCard/Long";
 import Header from "../../components/header/Header";
 import Mybutton from "../../components/myButton/MyButton";
@@ -18,33 +18,29 @@ export default function Features() {
       image: img1,
       title: "Quick Ads",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      doesSelected: true,
     },
     {
       image: img2,
       title: "Discover Platforms",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      doesSelected: null,
     },
     {
       image: img3,
       title: "Gain Visibility",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      doesSelected: null,
     },
     {
       image: img4,
       title: "Automate Audience",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      doesSelected: null,
     },
     {
       image: img5,
       title: "Save & Collaborate",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      doesSelected: null,
     },
   ];
+  const [doesSelected, setDoesSelected] = useState(0);
   return (
     <div className={styles.feat}>
       <Header />
@@ -85,7 +81,13 @@ export default function Features() {
               title={el.title}
               SRC={el.image}
               desc={el.desc}
-              doesSelected={el.doesSelected}
+              BG={
+                doesSelected === i &&
+                "linear-gradient(92.21deg, #005792 6.65%, #04118A 106.65%)"
+              }
+              COLOR={doesSelected === i && "#fff"}
+              clicked={i}
+              setDoesSelected={(elem) => setDoesSelected(elem)}
             />
           ))}
         </div>
