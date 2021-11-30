@@ -2,11 +2,23 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./MyButton.module.css";
 
-const Mybutton = ({ title, BG, ico, COLOR, imgColor, WIDTH, HREF }) => {
+const Mybutton = ({
+  title,
+  BG,
+  ico,
+  COLOR,
+  imgColor,
+  WIDTH,
+  HREF,
+  clickFN,
+}) => {
   const history = useHistory();
   return (
     <button
-      onClick={() => history.push(HREF)}
+      onClick={() => {
+        clickFN();
+        history.push(HREF);
+      }}
       style={{ background: BG, width: WIDTH }}
       className={styles.myBtn}
     >

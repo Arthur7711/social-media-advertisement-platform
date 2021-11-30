@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Mylabel from "../../components/myLabel/MyLabel";
 import styles from "./Login.module.css";
 import Mybutton from "../../components/myButton/MyButton";
@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 
 const Login = () => {
+  const [loginData, setLoginData] = useState({
+    mail: "",
+    password: "",
+  });
+  
   return (
     <div className={styles.log}>
       <div className={styles.all}>
@@ -15,12 +20,29 @@ const Login = () => {
         <div className={styles.login}>
           <h1>Let's Get Started</h1>
           <p>Sign in to continue to ADCLOUD</p>
-          <Mylabel name="E-Mail" type="email" plat="Enter Your E-Mail" />
-          <Mylabel name="Password" type="password" plat="Password" />
+          <Mylabel
+            onchange={(el) =>
+              setLoginData({ ...loginData, mail: el.target.value })
+            }
+            data={loginData.mail}
+            name="E-Mail"
+            type="email"
+            plat="Enter Your E-Mail"
+          />
+          <Mylabel
+            onchange={(el) =>
+              setLoginData({ ...loginData, password: el.target.value })
+            }
+            data={loginData.password}
+            name="Password"
+            type="password"
+            plat="Password"
+          />
           <div className={styles.btn}>
             <Mybutton
+              clickFN={() => console.log(JSON.stringify(loginData))}
               title="Log In"
-              HREF='/dashboard'
+              HREF="/dashboard"
               ico={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
