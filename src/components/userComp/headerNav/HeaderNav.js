@@ -459,8 +459,9 @@ export default function PersistentDrawerLeft({ children }) {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        
-        <div onClick={()=>history.push('/createadd')}
+
+        <div
+          onClick={() => history.push("/createadd")}
           style={{
             background:
               "linear-gradient(92.21deg, #005792 6.65%, #04118A 106.65%)",
@@ -488,10 +489,10 @@ export default function PersistentDrawerLeft({ children }) {
             Create an AD
           </span>
         </div>
-        
+
         <List>
           {navState.map((item, index) => (
-            <NavLink to={`/${item.text.toLowerCase()}`}>
+            <NavLink key={index} to={`/${item.text.toLowerCase()}`}>
               <ListItem
                 button
                 key={index}
@@ -514,7 +515,12 @@ export default function PersistentDrawerLeft({ children }) {
       </Drawer>
       <Main open={open}>
         {navState.map((el) => (
-          <Route exact path={`/${el.text.toLowerCase()}`} component={el.text} />
+          <Route
+            key={Math.random()*222}
+            exact
+            path={`/${el.text.toLowerCase()}`}
+            component={el.text}
+          />
         ))}
         <div
           style={{ padding: "100px", background: "#F7FBFE", height: "100vh" }}

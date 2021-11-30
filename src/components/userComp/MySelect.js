@@ -37,7 +37,7 @@ export default function MySelect({ title, options, BG, COLOR, WIDTH }) {
           onChange={handleChange}
           style={{ height: "40px" }}
         >
-          {options && options.map((el) => <MenuItem value={el}>{el}</MenuItem>)}
+          {options && options.map((el,i) => <MenuItem key={i} value={el}>{el}</MenuItem>)}
         </Select>
       </FormControl>
     </Box>

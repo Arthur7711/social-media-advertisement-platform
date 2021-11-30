@@ -7,13 +7,13 @@ import { IconButton } from "@mui/material";
 export default function MyTable({ titles, datas }) {
   return (
     <div className={styles.my}>
-      {titles.map((el) => (
-        <p key={el} className={styles.p}>
+      {titles.map((el, i) => (
+        <p key={i} className={styles.p}>
           {el}
         </p>
       ))}
-      {datas.map((el) => (
-        <>
+      {datas.map((el,i) => (
+        <React.Fragment key={i}>
           <div
             style={{
               display: "flex",
@@ -72,7 +72,7 @@ export default function MyTable({ titles, datas }) {
               </IconButton>
             )}
           </div>
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

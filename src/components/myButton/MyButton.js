@@ -16,7 +16,7 @@ const Mybutton = ({
   return (
     <button
       onClick={() => {
-        clickFN();
+        clickFN && clickFN();
         history.push(HREF);
       }}
       style={{ background: BG, width: WIDTH }}
