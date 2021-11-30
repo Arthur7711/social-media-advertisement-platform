@@ -134,7 +134,7 @@ SimpleDialog.propTypes = {
 
 export default function SimpleDialogDemo() {
   const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState();
+  const [selectedValue, setSelectedValue] = React.useState("");
   const [coins, setCoins] = React.useState(0);
 
   const handleClickOpen = () => {

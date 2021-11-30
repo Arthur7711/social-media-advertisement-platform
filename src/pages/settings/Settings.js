@@ -35,10 +35,10 @@ const Settings = () => {
                 y2="-4.21754"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#005792" stop-opacity="0.35" />
-                <stop stop-color="#005792" stop-opacity="0.4" />
-                <stop offset="0.0001" stop-color="#2FABFF" />
-                <stop offset="1" stop-color="#04118A" />
+                <stop stopColor="#005792" stopOpacity="0.35" />
+                <stop stopColor="#005792" stopOpacity="0.4" />
+                <stop offset="0.0001" stopColor="#2FABFF" />
+                <stop offset="1" stopColor="#04118A" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_163_315"
@@ -48,10 +48,10 @@ const Settings = () => {
                 y2="5.02123"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#005792" stop-opacity="0.35" />
-                <stop stop-color="#005792" stop-opacity="0.4" />
-                <stop offset="0.0001" stop-color="#2FABFF" />
-                <stop offset="1" stop-color="#04118A" />
+                <stop stopColor="#005792" stopOpacity="0.35" />
+                <stop stopColor="#005792" stopOpacity="0.4" />
+                <stop offset="0.0001" stopColor="#2FABFF" />
+                <stop offset="1" stopColor="#04118A" />
               </linearGradient>
             </defs>
           </svg>

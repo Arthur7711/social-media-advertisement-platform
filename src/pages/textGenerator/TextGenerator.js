@@ -149,7 +149,7 @@ function SimpleDialog(props) {
                 display: "flex",
                 justifyContent: "flex-end",
                 margin: 10,
-                marginTop:50
+                marginTop: 50,
               }}
             >
               <Simplebutton
@@ -167,7 +167,7 @@ function SimpleDialog(props) {
                 color: "#5E5E5E",
                 margin: 10,
                 textAlign: "center",
-                marginTop:50
+                marginTop: 50,
               }}
             >
               This is a beta-feature, if our A.I. is bringing nonsense answers,
@@ -217,7 +217,7 @@ SimpleDialog.propTypes = {
 
 export default function TextGenerator() {
   const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState();
+  const [selectedValue, setSelectedValue] = React.useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
