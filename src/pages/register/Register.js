@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Register.module.css";
 import Mylabel from "../../components/myLabel/MyLabel";
 import Mybutton from "../../components/myButton/MyButton";
@@ -6,6 +6,13 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 
 const Register = () => {
+  const [registerData, setRegisterData] = useState({
+    name: "",
+    mail: "",
+    password: "",
+    country: "",
+  });
+
   return (
     <div className={styles.log}>
       <div className={styles.all}>
@@ -15,16 +22,49 @@ const Register = () => {
         <div className={styles.login}>
           <h1>Let's Get Started</h1>
           <p>Sign in to continue to ADCLOUD</p>
-          <Mylabel name="Name" type="text" plat="Enter Your First Name" />
-          <Mylabel name="E-Mail" type="email" plat="Enter Your E-Mail" />
-          <Mylabel name="Password" type="password" plat="Password" />
-          <Mylabel name="Country" type="text" plat="Select you country" />
+          <Mylabel
+            onchange={(el) =>
+              setRegisterData({ ...registerData, name: el.target.value })
+            }
+            data={registerData.name}
+            name="Name"
+            type="text"
+            plat="Enter Your First Name"
+          />
+          <Mylabel
+            onchange={(el) =>
+              setRegisterData({ ...registerData, mail: el.target.value })
+            }
+            data={registerData.mail}
+            name="E-Mail"
+            type="email"
+            plat="Enter Your E-Mail"
+          />
+          <Mylabel
+            onchange={(el) =>
+              setRegisterData({ ...registerData, password: el.target.value })
+            }
+            data={registerData.password}
+            name="Password"
+            type="password"
+            plat="Password"
+          />
+          <Mylabel
+            onchange={(el) =>
+              setRegisterData({ ...registerData, country: el.target.value })
+            }
+            data={registerData.country}
+            name="Country"
+            type="text"
+            plat="Select you country"
+          />
 
           <p className={styles.p}>
             By registering you agree to the Terms of Use
           </p>
           <div className={styles.btn}>
             <Mybutton
+              clickFN={() => console.log(JSON.stringify(registerData))}
               title="Register"
               HREF="/dashboard"
               ico={
