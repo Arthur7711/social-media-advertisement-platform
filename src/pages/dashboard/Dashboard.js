@@ -48,6 +48,7 @@ const Dashboard = () => {
               title="Age"
               options={["18-25", "26-30", "30-45"]}
               BG="#fff"
+              WIDTH="100%"
             />
           </div>
           <MySelect

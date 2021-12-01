@@ -217,7 +217,9 @@ const Uniquetable = () => {
             />
           </div>
           <div style={{ width: 35 }} className={styles.imgBox}>
-            <img alt="changeMaker" src={changes} />
+            <IconButton>
+              <img alt="changeMaker" src={changes} />
+            </IconButton>
           </div>
         </div>
         {portalData.map((el) => (
@@ -247,17 +249,19 @@ const Uniquetable = () => {
               style={{ width: 130, borderRight: "1px solid #dde1eb" }}
               className={styles.p}
             >
-              <svg
-                width="15"
-                height="21"
-                viewBox="0 0 15 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect y="12" width="3" height="9" fill="#1DAAFF" />
-                <rect x="6" y="7" width="3" height="14" fill="#1DAAFF" />
-                <rect x="12" width="3" height="21" fill="#1DAAFF" />
-              </svg>
+              <IconButton>
+                <svg
+                  width="15"
+                  height="21"
+                  viewBox="0 0 15 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect y="12" width="3" height="9" fill="#1DAAFF" />
+                  <rect x="6" y="7" width="3" height="14" fill="#1DAAFF" />
+                  <rect x="12" width="3" height="21" fill="#1DAAFF" />
+                </svg>
+              </IconButton>
             </div>
             <p
               style={{ width: 130, borderRight: "1px solid #dde1eb" }}
@@ -296,7 +300,9 @@ const Uniquetable = () => {
               {el.spend}
             </p>
             <div style={{ width: 35 }} className={styles.p}>
-              <MoreVertIcon color="primary" />
+              <IconButton>
+                <MoreVertIcon color="primary" />
+              </IconButton>
             </div>
           </div>
         ))}

@@ -159,13 +159,17 @@ const Businesses = () => {
                 </div>
                 <div className={styles.borderDv}>{el.name}</div>
                 <div className={styles.borderDv}>
-                  <img alt="edit" src={editIco} />
+                  <IconButton>
+                    <img alt="edit" src={editIco} />
+                  </IconButton>
                 </div>
                 <div className={styles.borderDv}>
                   <p>{el.type}</p>
                 </div>
                 <div className={styles.borderDv}>
-                  <img alt="deleteIco" src={deleteIco} />
+                  <IconButton>
+                    <img alt="deleteIco" src={deleteIco} />
+                  </IconButton>
                 </div>
               </>
             ))}
