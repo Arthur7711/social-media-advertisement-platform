@@ -4,14 +4,17 @@ import Mylabel from "../../components/myLabel/MyLabel";
 import Mybutton from "../../components/myButton/MyButton";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  fullname,
+  email,
+  password,
+  country,
+} from "../../features/register/registerSlice";
 
 const Register = () => {
-  const [registerData, setRegisterData] = useState({
-    name: "",
-    mail: "",
-    password: "",
-    country: "",
-  });
+  const registering = useSelector((state) => state.register);
+  const dispatch = useDispatch();
 
   return (
     <div className={styles.log}>
@@ -23,37 +26,29 @@ const Register = () => {
           <h1>Let's Get Started</h1>
           <p>Sign in to continue to ADCLOUD</p>
           <Mylabel
-            onchange={(el) =>
-              setRegisterData({ ...registerData, name: el.target.value })
-            }
-            data={registerData.name}
+            onchange={(el) => dispatch(fullname(el.target.value))}
+            data={registering.fullname}
             name="Name"
             type="text"
             plat="Enter Your First Name"
           />
           <Mylabel
-            onchange={(el) =>
-              setRegisterData({ ...registerData, mail: el.target.value })
-            }
-            data={registerData.mail}
+            onchange={(el) => dispatch(email(el.target.value))}
+            data={registering.email}
             name="E-Mail"
             type="email"
             plat="Enter Your E-Mail"
           />
           <Mylabel
-            onchange={(el) =>
-              setRegisterData({ ...registerData, password: el.target.value })
-            }
-            data={registerData.password}
+            onchange={(el) => dispatch(password(el.target.value))}
+            data={registering.password}
             name="Password"
             type="password"
             plat="Password"
           />
           <Mylabel
-            onchange={(el) =>
-              setRegisterData({ ...registerData, country: el.target.value })
-            }
-            data={registerData.country}
+            onchange={(el) => dispatch(country(el.target.value))}
+            data={registering.country}
             name="Country"
             type="text"
             plat="Select you country"
@@ -64,7 +59,7 @@ const Register = () => {
           </p>
           <div className={styles.btn}>
             <Mybutton
-              clickFN={() => console.log(JSON.stringify(registerData))}
+              clickFN={() => console.log(JSON.stringify(registering))}
               title="Register"
               HREF="/dashboard"
               ico={
