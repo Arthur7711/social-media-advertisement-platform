@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import Mylabel from "../../components/myLabel/MyLabel";
 import styles from "./Login.module.css";
 import Mybutton from "../../components/myButton/MyButton";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
+import { useSelector, useDispatch } from "react-redux";
+import { email, password } from "../../features/login/loginSlice";
 
 const Login = () => {
-  const [loginData, setLoginData] = useState({
-    mail: "",
-    password: "",
-  });
-  
+  const logining = useSelector((state) => state.login);
+  const dispatch = useDispatch();
+
+  // const [loginData, setLoginData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+  console.log(logining)
   return (
     <div className={styles.log}>
       <div className={styles.all}>
@@ -21,26 +26,26 @@ const Login = () => {
           <h1>Let's Get Started</h1>
           <p>Sign in to continue to ADCLOUD</p>
           <Mylabel
+          // dispatch(increment())
             onchange={(el) =>
-              setLoginData({ ...loginData, mail: el.target.value })
+              dispatch(email(el.target.value))
             }
-            data={loginData.mail}
+            data={logining.email}
             name="E-Mail"
             type="email"
             plat="Enter Your E-Mail"
           />
           <Mylabel
-            onchange={(el) =>
-              setLoginData({ ...loginData, password: el.target.value })
+            onchange={(el) =>dispatch(password(el.target.value))
             }
-            data={loginData.password}
+            data={logining.password}
             name="Password"
             type="password"
             plat="Password"
           />
           <div className={styles.btn}>
             <Mybutton
-              clickFN={() => console.log(JSON.stringify(loginData))}
+              // clickFN={() => console.log(JSON.stringify(loginData))}
               title="Log In"
               HREF="/dashboard"
               ico={

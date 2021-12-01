@@ -8,7 +8,6 @@ import Paymantpart from "../../components/paymantPart/PaymantPart";
 import Socialpart from "../../components/socialPart/SocialPart";
 import Staps from "../../components/staps/Staps";
 import Workersarea from "../../components/workersArea/WorkersArea";
-import { Counter } from "../../features/counter/Counter";
 import styles from "./Home.module.css";
 
 const Home = () => {
