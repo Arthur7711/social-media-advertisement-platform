@@ -47,7 +47,7 @@ const Register = () => {
             plat="Password"
           />
           <Mylabel
-            onchange={(el) => dispatch(country(el.target.value))}
+            onchange={(el) => dispatch(country(Number(el.target.value)))}
             data={registering.country}
             name="Country"
             type="text"
