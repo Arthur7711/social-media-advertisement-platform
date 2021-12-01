@@ -10,12 +10,6 @@ import { email, password } from "../../features/login/loginSlice";
 const Login = () => {
   const logining = useSelector((state) => state.login);
   const dispatch = useDispatch();
-
-  // const [loginData, setLoginData] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-  // console.log(logining)
   return (
     <div className={styles.log}>
       <div className={styles.all}>
@@ -26,7 +20,6 @@ const Login = () => {
           <h1>Let's Get Started</h1>
           <p>Sign in to continue to ADCLOUD</p>
           <Mylabel
-          // dispatch(increment())
             onchange={(el) =>
               dispatch(email(el.target.value))
             }
