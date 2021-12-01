@@ -15,7 +15,7 @@ const Login = () => {
   //   email: "",
   //   password: "",
   // });
-  console.log(logining)
+  // console.log(logining)
   return (
     <div className={styles.log}>
       <div className={styles.all}>
@@ -45,7 +45,7 @@ const Login = () => {
           />
           <div className={styles.btn}>
             <Mybutton
-              // clickFN={() => console.log(JSON.stringify(loginData))}
+              clickFN={() => console.log(JSON.stringify(logining))}
               title="Log In"
               HREF="/dashboard"
               ico={
