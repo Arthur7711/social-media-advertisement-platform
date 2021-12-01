@@ -8,6 +8,7 @@ import Paymantpart from "../../components/paymantPart/PaymantPart";
 import Socialpart from "../../components/socialPart/SocialPart";
 import Staps from "../../components/staps/Staps";
 import Workersarea from "../../components/workersArea/WorkersArea";
+import { Counter } from "../../features/counter/Counter";
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
     },
   ];
   return (
+    // <Counter />
     <>
       <Header />
       <Socialpart />
@@ -63,27 +65,6 @@ const Home = () => {
             workState={(elem) => setSelectedId(elem)}
           />
         ))}
-        {/* <Smallcard
-          title="Create"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum "
-          BGCOLOR="linear-gradient(92.21deg, #005792 6.65%, #04118a 106.65%)"
-          COLOR="#fff"
-        />
-        <Smallcard
-          title="Discover"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum "
-          COLOR="#005792"
-        />
-        <Smallcard
-          title="Understand"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum "
-          COLOR="#005792"
-        />
-        <Smallcard
-          title="Automate"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum "
-          COLOR="#005792"
-        /> */}
       </div>
       <Mainarea />
       <Bluearea />
