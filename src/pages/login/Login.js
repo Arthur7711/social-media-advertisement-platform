@@ -10,6 +10,28 @@ import { email, password } from "../../features/login/loginSlice";
 const Login = () => {
   const logining = useSelector((state) => state.login);
   const dispatch = useDispatch();
+
+//  const getData = async () => {
+//     const location = window.location.hostname;
+//     const settings = {
+//       method: "POST",
+//       headers: {
+//         Accept: "application/json",
+//         "Content-Type": "application/json",
+//       },
+//     };
+//     try {
+//       const fetchResponse = await fetch(
+//         `http://${location}:9000/api/sensors/`,
+//         settings
+//       );
+//       const data = await fetchResponse.json();
+//       return data;
+//     } catch (e) {
+//       return e;
+//     }
+//   };
+
   return (
     <div className={styles.log}>
       <div className={styles.all}>
@@ -20,17 +42,14 @@ const Login = () => {
           <h1>Let's Get Started</h1>
           <p>Sign in to continue to ADCLOUD</p>
           <Mylabel
-            onchange={(el) =>
-              dispatch(email(el.target.value))
-            }
+            onchange={(el) => dispatch(email(el.target.value))}
             data={logining.email}
             name="E-Mail"
             type="email"
             plat="Enter Your E-Mail"
           />
           <Mylabel
-            onchange={(el) =>dispatch(password(el.target.value))
-            }
+            onchange={(el) => dispatch(password(el.target.value))}
             data={logining.password}
             name="Password"
             type="password"
