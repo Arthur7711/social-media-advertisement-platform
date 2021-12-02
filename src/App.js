@@ -5,14 +5,16 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Pricing from "./pages/pricing/Pricing";
 import Register from "./pages/register/Register";
-import Dashboard from './pages/dashboard/Dashboard'
-import Businesses from './pages/businesses/Businesses'
-import Accounts from './pages/accounts/Accounts'
-import Introduction from './pages/introduction/Introduction'
+import Dashboard from "./pages/dashboard/Dashboard";
+import Businesses from "./pages/businesses/Businesses";
+import Accounts from "./pages/accounts/Accounts";
+import Introduction from "./pages/introduction/Introduction";
 import Settings from "./pages/settings/Settings";
 import Createadd from "./pages/createAdd/CreateAdd";
 
 function App() {
+  // localStorage.setItem("lang", "en");
+
   return (
     <BrowserRouter>
       <Route exact path="/" component={Home} />

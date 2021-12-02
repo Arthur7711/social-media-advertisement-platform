@@ -6,7 +6,7 @@ import { initReactI18next } from "react-i18next";
 import english from "./languages/en.json";
 import franch from "./languages/fr.json";
 import russian from "./languages/ru.json";
-localStorage.setItem("lang", "en");
+
 const resources = {
   en: {
     translation: english,
@@ -18,11 +18,12 @@ const resources = {
     translation: russian,
   },
 };
+
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: localStorage.getItem("lang"),
+    lng: "en",
     // lng: "en",
     // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
     // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage

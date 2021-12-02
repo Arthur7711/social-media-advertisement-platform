@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import logo from "../../images/logo.png";
 import Mybutton from "../myButton/MyButton";
+import i18next from "i18next";
 
 const Header = () => {
+  const [lang, setLang] = useState("en");
+
+  function changingLang(e) {
+    setLang(e);
+    i18next.changeLanguage(lang);
+  }
+  useEffect(()=>{
+    changingLang()
+  },[lang])
+
   return (
     <header className={styles.head}>
       <div className={styles.leftHead}>
@@ -34,8 +45,13 @@ const Header = () => {
               clipRule="evenodd"
             />
           </svg>
-          <select name="cars" id="cars">
+          <select
+            onChange={(e) => changingLang(e.target.value)}
+            name="cars"
+            id="cars"
+          >
             <option value="en">en</option>
+            <option value="fr">fr</option>
             <option value="ru">ru</option>
           </select>
         </div>
@@ -44,7 +60,7 @@ const Header = () => {
         </Link>
         <Mybutton
           title="Get started"
-          HREF='/register'
+          HREF="/register"
           ico={
             <svg
               xmlns="http://www.w3.org/2000/svg"

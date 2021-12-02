@@ -9,6 +9,7 @@ import Socialpart from "../../components/socialPart/SocialPart";
 import Staps from "../../components/staps/Staps";
 import Workersarea from "../../components/workersArea/WorkersArea";
 import styles from "./Home.module.css";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const [selectedId, setSelectedId] = useState(0);
@@ -30,10 +31,13 @@ const Home = () => {
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ",
     },
   ];
+
+  const { t, i18n } = useTranslation();
+
   return (
-    // <Counter />
     <>
       <Header />
+      <h1>{t("Welcome to React")}</h1>
       <Socialpart />
       <Staps />
       <div className={styles.midArea}>
