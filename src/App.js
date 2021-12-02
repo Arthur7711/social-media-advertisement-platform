@@ -13,8 +13,6 @@ import Settings from "./pages/settings/Settings";
 import Createadd from "./pages/createAdd/CreateAdd";
 
 function App() {
-  // localStorage.setItem("lang", "en");
-
   return (
     <BrowserRouter>
       <Route exact path="/" component={Home} />

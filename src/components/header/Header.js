@@ -6,15 +6,33 @@ import Mybutton from "../myButton/MyButton";
 import i18next from "i18next";
 
 const Header = () => {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState(
+    localStorage.getItem("language") && localStorage.getItem("language")
+  );
 
   function changingLang(e) {
-    setLang(e);
-    i18next.changeLanguage(lang);
+    setLang(
+      e
+        ? localStorage.setItem("language", e)
+        : localStorage.setItem("language", "en")
+    );
+    i18next.changeLanguage(localStorage.getItem("language"));
   }
-  useEffect(()=>{
-    changingLang()
-  },[lang])
+
+  // useEffect(() => {
+  //   changingLang();
+  // }, [lang]);
+
+  // const [lang, setLang] = useState("en");
+
+  // function changingLang(e) {
+  //   setLang(e);
+  //   i18next.changeLanguage(lang);
+  // }
+
+  // useEffect(() => {
+  //   changingLang();
+  // }, [lang]);
 
   return (
     <header className={styles.head}>
@@ -50,6 +68,12 @@ const Header = () => {
             name="cars"
             id="cars"
           >
+            <option
+              // style={{ opacity: 0 }}
+              value={localStorage.getItem("language")}
+            >
+              {localStorage.getItem("language")}
+            </option>
             <option value="en">en</option>
             <option value="fr">fr</option>
             <option value="ru">ru</option>
