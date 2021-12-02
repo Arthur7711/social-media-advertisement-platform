@@ -19,21 +19,13 @@ const Header = () => {
     i18next.changeLanguage(localStorage.getItem("language"));
   }
 
-  // useEffect(() => {
-  //   changingLang();
-  // }, [lang]);
-
-  // const [lang, setLang] = useState("en");
-
-  // function changingLang(e) {
-  //   setLang(e);
-  //   i18next.changeLanguage(lang);
-  // }
-
-  // useEffect(() => {
-  //   changingLang();
-  // }, [lang]);
-
+  const langs = new Set();
+  langs.add(localStorage.getItem("language"));
+  langs.add("en");
+  langs.add("ru");
+  langs.add("fr");
+  const [langsPart, setLangsPart] = useState([...langs]);
+  
   return (
     <header className={styles.head}>
       <div className={styles.leftHead}>
@@ -68,15 +60,9 @@ const Header = () => {
             name="cars"
             id="cars"
           >
-            <option
-              // style={{ opacity: 0 }}
-              value={localStorage.getItem("language")}
-            >
-              {localStorage.getItem("language")}
-            </option>
-            <option value="en">en</option>
-            <option value="fr">fr</option>
-            <option value="ru">ru</option>
+            {langsPart.map((elem) => (
+              <option key={elem} value={elem}>{elem}</option>
+            ))}
           </select>
         </div>
         <Link to="/login">
