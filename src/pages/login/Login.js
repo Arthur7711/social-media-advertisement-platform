@@ -7,33 +7,46 @@ import logo from "../../images/logo.png";
 import { useSelector, useDispatch } from "react-redux";
 import { email, password } from "../../features/login/loginSlice";
 import { useTranslation } from "react-i18next";
+import { API } from "../../API/API";
+import axios from "axios";
 
 const Login = () => {
   const logining = useSelector((state) => state.login);
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
 
-  //  const getData = async () => {
-  //     const location = window.location.hostname;
-  //     const settings = {
-  //       method: "POST",
-  //       headers: {
-  //         Accept: "application/json",
-  //         "Content-Type": "application/json",
-  //       },
-  //     };
-  //     try {
-  //       const fetchResponse = await fetch(
-  //         `http://${location}:9000/api/sensors/`,
-  //         settings
-  //       );
-  //       const data = await fetchResponse.json();
-  //       return data;
-  //     } catch (e) {
-  //       return e;
-  //     }
-  //   };
+  // const options = {
+  //   url: API.baseURL,
+  //   method: "POST",
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json;charset=UTF-8",
+  //   },
+  //   data: {
+  //     name: "David",
+  //     age: 45,
+  //   },
+  // };
 
+  // axios(options).then((response) => {
+  //   console.log(response.status);
+  // });
+
+  // const axios = require('axios');
+  // const sendGetRequest = async () => {
+  //   try {
+  //       const resp = await axios.get('https://jsonplaceholder.typicode.com/posts');
+  //       console.log(resp.data);
+  //   } catch (err) {
+  //       // Handle Error Here
+  //       console.error(err);
+  //   }
+  // };
+  // sendGetRequest();
+
+  function dataSending() {
+    console.log(JSON.stringify(logining));
+  }
   return (
     // <h1>{t("Welcome to React")}</h1>
     <div className={styles.log}>
@@ -60,7 +73,7 @@ const Login = () => {
           />
           <div className={styles.btn}>
             <Mybutton
-              clickFN={() => console.log(JSON.stringify(logining))}
+              clickFN={() => dataSending()}
               title="Log In"
               HREF="/dashboard"
               ico={
