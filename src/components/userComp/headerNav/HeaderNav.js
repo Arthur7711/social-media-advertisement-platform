@@ -514,9 +514,9 @@ export default function PersistentDrawerLeft({ children }) {
         <SimpleDialogDemo />
       </Drawer>
       <Main open={open}>
-        {navState.map((el) => (
+        {navState.map((el, i) => (
           <Route
-            key={Math.random()*222}
+            key={i}
             exact
             path={`/${el.text.toLowerCase()}`}
             component={el.text}
@@ -558,8 +558,9 @@ export default function PersistentDrawerLeft({ children }) {
               EARLIER
             </p>
             <main>
-              {incomingData.map((el) => (
+              {incomingData.map((el, i) => (
                 <div
+                  key={i}
                   style={{
                     border: " 1px solid #DDE1EB",
                     boxSizing: "border-box",

@@ -6,7 +6,7 @@ import selectedIcon from "../../images/blueSel.png";
 import BasicTabs from "../../components/userComp/Tabs";
 
 const Settings = () => {
-    const[percent,setPercent]=useState(0)
+  const [percent, setPercent] = useState(0);
   return (
     <PersistentDrawerLeft>
       <div className={styles.bus}>

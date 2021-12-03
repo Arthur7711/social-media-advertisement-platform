@@ -142,8 +142,8 @@ const Businesses = () => {
             <div className={styles.tit}>
               <p>Delete</p>
             </div>
-            {data.map((el) => (
-              <>
+            {data.map((el,i) => (
+              <React.Fragment key={i}>
                 <div className={styles.borderDv}>
                   <Stack
                     direction="row"
@@ -171,7 +171,7 @@ const Businesses = () => {
                     <img alt="deleteIco" src={deleteIco} />
                   </IconButton>
                 </div>
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>

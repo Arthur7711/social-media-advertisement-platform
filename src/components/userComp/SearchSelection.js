@@ -181,7 +181,11 @@ export default function SearchSelection() {
         <Label {...getInputLabelProps()}></Label>
         <InputWrapper ref={setAnchorEl} className={focused ? "focused" : ""}>
           {value.map((option, index) => (
-            <StyledTag label={option.title} {...getTagProps({ index })} />
+            <StyledTag
+              key={index}
+              label={option.title}
+              {...getTagProps({ index })}
+            />
           ))}
 
           <input {...getInputProps()} />
@@ -190,7 +194,7 @@ export default function SearchSelection() {
       {groupedOptions.length > 0 ? (
         <Listbox {...getListboxProps()}>
           {groupedOptions.map((option, index) => (
-            <li {...getOptionProps({ option, index })}>
+            <li key={index} {...getOptionProps({ option, index })}>
               <span>{option.title}</span>
               <CheckIcon fontSize="small" />
             </li>

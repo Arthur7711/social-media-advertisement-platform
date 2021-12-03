@@ -136,9 +136,9 @@ export default function BasicTabs() {
               padding: 20,
             }}
           >
-            <h2 style={{ fontSize: 16, color: "#475761", textAlign: "center" }}>
+            <p style={{ fontSize: 16, color: "#475761", textAlign: "center" }}>
               Change Personal Information
-            </h2>
+            </p>
             <p
               style={{
                 color: "#A09DA1",
@@ -189,9 +189,9 @@ export default function BasicTabs() {
               marginLeft: 20,
             }}
           >
-            <h2 style={{ fontSize: 16, color: "#475761", textAlign: "center" }}>
+            <p style={{ fontSize: 16, color: "#475761", textAlign: "center" }}>
               Change Personal Information
-            </h2>
+            </p>
             <p
               style={{
                 color: "#A09DA1",
@@ -271,9 +271,9 @@ export default function BasicTabs() {
               height: 550,
             }}
           >
-            <h3 style={{ color: "#475761", fontSize: 16, marginLeft: "15px" }}>
+            <p style={{ color: "#475761", fontSize: 16, marginLeft: "15px" }}>
               Billing Information
-            </h3>
+            </p>
             <div style={{ display: "grid", gridTemplateColumns: "50% 50%" }}>
               <label>
                 <p style={{ marginLeft: "15px", color: "#A09DA1" }}>
@@ -348,9 +348,16 @@ export default function BasicTabs() {
               height: 550,
             }}
           >
-            <h3 style={{ color: "#475761", fontSize: 16, marginLeft: "15px" }}>
+            <p
+              style={{
+                color: "#475761",
+                fontSize: 16,
+                marginLeft: "15px",
+                fontWeight: "bold",
+              }}
+            >
               Upcoming Invoice
-            </h3>
+            </p>
             <p style={{ marginLeft: "15px", color: "#A09DA1" }}>
               This is a preview of the invoice that will be billed.
             </p>
@@ -412,8 +419,8 @@ export default function BasicTabs() {
               >
                 AMOUNT
               </div>
-              {upcomingData.map((el) => (
-                <>
+              {upcomingData.map((el, i) => (
+                <React.Fragment key={i}>
                   <div
                     style={{
                       display: "flex",
@@ -466,7 +473,7 @@ export default function BasicTabs() {
                   >
                     {`$${el.price * el.count}`}
                   </div>
-                </>
+                </React.Fragment>
               ))}
             </div>
             <div
