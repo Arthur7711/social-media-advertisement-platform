@@ -59,14 +59,14 @@ const Dashboard = () => {
           />
           <MySelect
             title="COST PER CLICK"
-            options={["18-25", "26-30", "30-45"]}
+            options={["something", "something", "something"]}
             COLOR="#A09DA1"
             BG="#F4F4F4"
             WIDTH="200px"
           />
           <MySelect
             title="COST PER CLICK"
-            options={["18-25", "26-30", "30-45"]}
+            options={["something", "something", "something"]}
             COLOR="#A09DA1"
             BG="#F4F4F4"
             WIDTH="200px"
@@ -75,7 +75,7 @@ const Dashboard = () => {
             <div className={styles.topPart}>
               <span>Select your conversion</span>
               <MySelect
-                options={["18-25", "26-30", "30-45"]}
+                options={["something", "something", "something"]}
                 COLOR="#A09DA1"
                 BG="#fff"
                 WIDTH="330px"
@@ -84,21 +84,21 @@ const Dashboard = () => {
             <div className={styles.bottomLeft}>
               <MySelect
                 title="CLICK RATE"
-                options={["18-25", "26-30", "30-45"]}
+                options={["something", "something", "something"]}
                 COLOR="#A09DA1"
                 BG="#F4F4F4"
                 WIDTH="130px"
               />
               <MySelect
                 title="TOTAL SPEND"
-                options={["18-25", "26-30", "30-45"]}
+                options={["something", "something", "something"]}
                 COLOR="#A09DA1"
                 BG="#F4F4F4"
                 WIDTH="150px"
               />
               <MySelect
                 title="REACH"
-                options={["18-25", "26-30", "30-45"]}
+                options={["something", "something", "something"]}
                 COLOR="#475761"
                 BG="#E3E3E3"
                 WIDTH="130px"
