@@ -9,6 +9,14 @@ import SimpleInput from "../simpleInput/SimpleInput";
 import Simplebutton from "../simpleButton/SimpleButton";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import MyTable from "../myTable/MyTable";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  userFirst,
+  emailFirst,
+  userSec,
+  emailSec,
+  confirmEmailSec,
+} from "../../features/settings/generalSlice.js";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -65,6 +73,11 @@ export default function BasicTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const generalSettings = useSelector((state) => state.general);
+  const dispatch = useDispatch();
+
+  const checkData = () => console.log(JSON.stringify(generalSettings));
 
   return (
     <Box sx={{ width: "100%", marginTop: "50px" }}>
@@ -135,12 +148,27 @@ export default function BasicTabs() {
             >
               <img alt="download" src={down} />
               <div style={{ display: "grid", gridTemplateColumns: "100%" }}>
-                <SimpleInput plac="Charles Hu" WIDTH="445px" />
-                <SimpleInput plac="kivi_nz@hotmail.com" WIDTH="445px" />
+                <SimpleInput
+                  onchange={(el) => dispatch(userFirst(el.target.value))}
+                  data={generalSettings.userFirst}
+                  plac="Charles Hu"
+                  WIDTH="445px"
+                />
+                <SimpleInput
+                  onchange={(el) => dispatch(emailFirst(el.target.value))}
+                  data={generalSettings.emailFirst}
+                  plac="kivi_nz@hotmail.com"
+                  WIDTH="445px"
+                />
               </div>
             </div>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Simplebutton COLOR="#fff" BG="#1DAAFF" text="SAVE CHANGES" />
+              <Simplebutton
+                clickFN={() => checkData()}
+                COLOR="#fff"
+                BG="#1DAAFF"
+                text="SAVE CHANGES"
+              />
             </div>
           </div>
           <div
@@ -165,14 +193,34 @@ export default function BasicTabs() {
               If you change email address, make sure to confirm the one after.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "100%" }}>
-              <SimpleInput plac="Charles Hu" WIDTH="500px" />
+              <SimpleInput
+                data={generalSettings.userSec}
+                onchange={(el) => dispatch(userSec(el.target.value))}
+                plac="Charles Hu"
+                WIDTH="500px"
+              />
               <div>
-                <SimpleInput plac="kivi_nz@hotmail.com" WIDTH="240px" />
-                <SimpleInput plac="kivi_nz@hotmail.com" WIDTH="240px" />
+                <SimpleInput
+                  data={generalSettings.emailSec}
+                  onchange={(el) => dispatch(emailSec(el.target.value))}
+                  plac="kivi_nz@hotmail.com"
+                  WIDTH="240px"
+                />
+                <SimpleInput
+                  data={generalSettings.confirmEmailSec}
+                  onchange={(el) => dispatch(confirmEmailSec(el.target.value))}
+                  plac="kivi_nz@hotmail.com"
+                  WIDTH="240px"
+                />
               </div>
             </div>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Simplebutton COLOR="#fff" BG="#1DAAFF" text="SAVE CHANGES" />
+              <Simplebutton
+                clickFN={() => checkData()}
+                COLOR="#fff"
+                BG="#1DAAFF"
+                text="SAVE CHANGES"
+              />
             </div>
           </div>
         </div>

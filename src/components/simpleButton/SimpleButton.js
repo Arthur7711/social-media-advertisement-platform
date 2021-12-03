@@ -1,8 +1,9 @@
 import React from "react";
 
-const Simplebutton = ({ COLOR, BG, text, WIDTH, BORDERCOLOR }) => {
+const Simplebutton = ({ COLOR, BG, text, WIDTH, BORDERCOLOR, clickFN }) => {
   return (
     <button
+      onClick={() => clickFN && clickFN()}
       style={{
         borderRadius: "6px",
         color: COLOR,

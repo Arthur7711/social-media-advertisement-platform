@@ -47,6 +47,7 @@ const Login = () => {
   function dataSending() {
     console.log(JSON.stringify(logining));
   }
+  
   return (
     // <h1>{t("Welcome to React")}</h1>
     <div className={styles.log}>
