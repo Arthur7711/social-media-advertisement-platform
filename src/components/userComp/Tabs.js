@@ -17,6 +17,13 @@ import {
   emailSec,
   confirmEmailSec,
 } from "../../features/settings/generalSlice.js";
+import {
+  firstName,
+  lastName,
+  company,
+  vat,
+  cardCheck,
+} from "../../features/settings/billingSlice";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -75,9 +82,11 @@ export default function BasicTabs() {
   };
 
   const generalSettings = useSelector((state) => state.general);
+  const billingSettings = useSelector((state) => state.billing);
   const dispatch = useDispatch();
 
   const checkData = () => console.log(JSON.stringify(generalSettings));
+  const checkBillingData = () => console.log(JSON.stringify(billingSettings));
 
   return (
     <Box sx={{ width: "100%", marginTop: "50px" }}>
@@ -270,21 +279,41 @@ export default function BasicTabs() {
                 <p style={{ marginLeft: "15px", color: "#A09DA1" }}>
                   First Name
                 </p>
-                <SimpleInput COLOR="#6884A9" WIDTH="250px" />
+                <SimpleInput
+                  onchange={(el) => dispatch(firstName(el.target.value))}
+                  data={billingSettings.firstName}
+                  COLOR="#6884A9"
+                  WIDTH="250px"
+                />
               </label>
               <label>
                 <p style={{ marginLeft: "15px", color: "#A09DA1" }}>
                   Last Name
                 </p>
-                <SimpleInput COLOR="#6884A9" WIDTH="250px" />
+                <SimpleInput
+                  onchange={(el) => dispatch(lastName(el.target.value))}
+                  data={billingSettings.lastName}
+                  COLOR="#6884A9"
+                  WIDTH="250px"
+                />
               </label>
               <label>
                 <p style={{ marginLeft: "15px", color: "#A09DA1" }}>Company</p>
-                <SimpleInput COLOR="#6884A9" WIDTH="250px" />
+                <SimpleInput
+                  onchange={(el) => dispatch(company(el.target.value))}
+                  data={billingSettings.company}
+                  COLOR="#6884A9"
+                  WIDTH="250px"
+                />
               </label>
               <label>
                 <p style={{ marginLeft: "15px", color: "#A09DA1" }}>Vat</p>
-                <SimpleInput COLOR="#6884A9" WIDTH="250px" />
+                <SimpleInput
+                  onchange={(el) => dispatch(vat(el.target.value))}
+                  data={billingSettings.vat}
+                  COLOR="#6884A9"
+                  WIDTH="250px"
+                />
               </label>
             </div>
             <h3 style={{ color: "#475761", marginLeft: "15px" }}>
@@ -292,11 +321,21 @@ export default function BasicTabs() {
             </h3>
             <label>
               <p style={{ marginLeft: "15px", color: "#A09DA1" }}>Card Check</p>
-              <SimpleInput COLOR="#6884A9" WIDTH="400px" />
+              <SimpleInput
+                onchange={(el) => dispatch(cardCheck(el.target.value))}
+                data={billingSettings.cardCheck}
+                COLOR="#6884A9"
+                WIDTH="400px"
+              />
             </label>
             <Simplebutton COLOR="#fff" BG="#42CC23" text="Change Card" />
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Simplebutton COLOR="#fff" BG="#1DAAFF" text="SAVE CHANGES" />
+              <Simplebutton
+                clickFN={(el) => checkBillingData(el)}
+                COLOR="#fff"
+                BG="#1DAAFF"
+                text="SAVE CHANGES"
+              />
             </div>
           </div>
           <div
