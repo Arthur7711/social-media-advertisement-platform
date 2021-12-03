@@ -48,13 +48,11 @@
   text-align: center;
   color: #04118a;
   margin: 10px !important;
-  font-weight: normal;
   font-weight: 200;
 }
 .login .p {
   font-family: "Poppins";
   font-size: 16px;
-  line-height: 24px;
   text-align: center;
   color: #4d7cc1;
   margin-top: 20px !important;
