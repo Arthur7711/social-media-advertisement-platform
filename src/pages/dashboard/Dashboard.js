@@ -6,6 +6,7 @@ import insta from "../../images/binsta.png";
 import Simplebutton from "../../components/simpleButton/SimpleButton";
 import MySelect from "../../components/userComp/MySelect";
 import UniqueTable from "../../components/uniqueTable/UniqueTable";
+import MyChart from "../../components/myChart/MyChart";
 
 const Dashboard = () => {
   return (
@@ -27,7 +28,9 @@ const Dashboard = () => {
           />
           <span>Aee your data and compare them with each other.</span>
         </div>
-        <div>{/* charts will be here */}</div>
+        <div>{/* charts will be here */}
+        <MyChart />
+        </div>
         <div className={styles.subInfo}>
           <h5>ACCOUNT BREAKDOWN VIEW</h5>
           <Simplebutton
