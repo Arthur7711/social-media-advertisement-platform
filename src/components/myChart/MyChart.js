@@ -32,7 +32,7 @@ class MyChart extends Component {
               options={this.state.options}
               series={this.state.series}
               type="bar"
-              width="500"
+              width="700"
             />
           </div>
         </div>
@@ -41,4 +41,4 @@ class MyChart extends Component {
   }
 }
 
-export default MyChartgit ;
+export default MyChart ;
