@@ -8,7 +8,7 @@ export const store = configureStore({
   reducer: {
     login: loginReducer,
     register: registerReducer,
-    general:generalSlice,
-    billing:billingSlice,
+    general: generalSlice,
+    billing: billingSlice,
   },
 });

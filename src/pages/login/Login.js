@@ -5,49 +5,23 @@ import Mybutton from "../../components/myButton/MyButton";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 import { useSelector, useDispatch } from "react-redux";
-import { email, password } from "../../features/login/loginSlice";
+import {
+  email,
+  password,
+  fetchUserById
+} from "../../features/login/loginSlice";
 import { useTranslation } from "react-i18next";
-import { API } from "../../API/API";
-import axios from "axios";
+// import { API } from "../../API/API";
 
 const Login = () => {
   const logining = useSelector((state) => state.login);
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
 
-  // const options = {
-  //   url: API.baseURL,
-  //   method: "POST",
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json;charset=UTF-8",
-  //   },
-  //   data: {
-  //     name: "David",
-  //     age: 45,
-  //   },
-  // };
-
-  // axios(options).then((response) => {
-  //   console.log(response.status);
-  // });
-
-  // const axios = require('axios');
-  // const sendGetRequest = async () => {
-  //   try {
-  //       const resp = await axios.get('https://jsonplaceholder.typicode.com/posts');
-  //       console.log(resp.data);
-  //   } catch (err) {
-  //       // Handle Error Here
-  //       console.error(err);
-  //   }
-  // };
-  // sendGetRequest();
-
   function dataSending() {
     console.log(JSON.stringify(logining));
   }
-  
+
   return (
     // <h1>{t("Welcome to React")}</h1>
     <div className={styles.log}>
@@ -74,7 +48,7 @@ const Login = () => {
           />
           <div className={styles.btn}>
             <Mybutton
-              clickFN={() => dataSending()}
+              clickFN={() => dispatch(fetchUserById(logining))}
               title="Log In"
               HREF="/dashboard"
               ico={
