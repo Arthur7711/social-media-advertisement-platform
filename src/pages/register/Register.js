@@ -10,6 +10,7 @@ import {
   email,
   password,
   country,
+  fetchUserRegister,
 } from "../../features/register/registerSlice";
 
 const Register = () => {
@@ -47,7 +48,7 @@ const Register = () => {
             plat="Password"
           />
           <Mylabel
-            onchange={(el) => dispatch(country(Number(el.target.value)))}
+            onchange={(el) => dispatch(country(el.target.value))}
             data={registering.country}
             name="Country"
             type="text"
@@ -59,7 +60,7 @@ const Register = () => {
           </p>
           <div className={styles.btn}>
             <Mybutton
-              clickFN={() => console.log(JSON.stringify(registering))}
+              clickFN={() => dispatch(fetchUserRegister(registering))}
               title="Register"
               HREF="/dashboard"
               ico={
