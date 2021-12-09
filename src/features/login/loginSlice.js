@@ -3,7 +3,7 @@ import { API } from "../../API/API";
 
 const initialState = {
   email: "",
-  password: "",
+  password: "",  
 };
 
 export const fetchUserById = createAsyncThunk(
