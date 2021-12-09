@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import introductionSlice from "../features/introduction/introductionSlice";
 import loginReducer from "../features/login/loginSlice";
 import registerReducer from "../features/register/registerSlice";
 import billingSlice from "../features/settings/billingSlice";
@@ -10,5 +11,6 @@ export const store = configureStore({
     register: registerReducer,
     general: generalSlice,
     billing: billingSlice,
+    introduction: introductionSlice,
   },
 });
