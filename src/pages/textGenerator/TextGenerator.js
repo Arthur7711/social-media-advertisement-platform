@@ -27,7 +27,7 @@ function SimpleDialog(props) {
             minWidth: "100%",
           }}
         >
-          <IconButton>
+          <IconButton onClick={handleClose}>
             <CloseIcon color="disabled" />
           </IconButton>
         </div>
@@ -39,7 +39,7 @@ function SimpleDialog(props) {
           }}
         >
           <div style={{ borderRight: "1px solid #DDE1EB" }}>
-            <Simplebutton text="SALES TEXT" COLOR="#fff" BG="#1DAAFF" />
+            <Simplebutton  text="SALES TEXT" COLOR="#fff" BG="#1DAAFF" />
             <div
               style={{
                 border: "1px solid #DDE1EB",
