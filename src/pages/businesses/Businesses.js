@@ -9,6 +9,8 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import editIco from "../../images/editIco.png";
 import deleteIco from "../../images/deleteIco.png";
+import { useSelector, useDispatch } from "react-redux";
+import { businessesDetails } from "../../features/businesses/businessesSlice";
 
 function stringToColor(string) {
   let hash = 0;
@@ -42,10 +44,8 @@ function stringAvatar(name) {
 }
 
 const Businesses = () => {
-  const [data, setData] = useState([
-    { name: "amazon", type: "E-Commerce" },
-    { name: "new star", type: "E-Commerce" },
-  ]);
+  const businessesDetails = useSelector((state) => state.businesses);
+  const dispatch = useDispatch();
 
   return (
     <PersistentDrawerLeft>
@@ -142,37 +142,38 @@ const Businesses = () => {
             <div className={styles.tit}>
               <p>Delete</p>
             </div>
-            {data.map((el,i) => (
-              <React.Fragment key={i}>
-                <div className={styles.borderDv}>
-                  <Stack
-                    direction="row"
-                    spacing={2}
-                    style={{
-                      display: "flex",
-                      justifyContent: "flex-start",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Avatar {...stringAvatar(JSON.stringify(el.name))} />
-                  </Stack>
-                </div>
-                <div className={styles.borderDv}>{el.name}</div>
-                <div className={styles.borderDv}>
-                  <IconButton>
-                    <img alt="edit" src={editIco} />
-                  </IconButton>
-                </div>
-                <div className={styles.borderDv}>
-                  <p>{el.type}</p>
-                </div>
-                <div className={styles.borderDv}>
-                  <IconButton>
-                    <img alt="deleteIco" src={deleteIco} />
-                  </IconButton>
-                </div>
-              </React.Fragment>
-            ))}
+            {businessesDetails.incomingdata &&
+              businessesDetails.incomingdata.map((el, i) => (
+                <React.Fragment key={i}>
+                  <div className={styles.borderDv}>
+                    <Stack
+                      direction="row"
+                      spacing={2}
+                      style={{
+                        display: "flex",
+                        justifyContent: "flex-start",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Avatar {...stringAvatar(JSON.stringify(el.name))} />
+                    </Stack>
+                  </div>
+                  <div className={styles.borderDv}>{el.name}</div>
+                  <div className={styles.borderDv}>
+                    <IconButton>
+                      <img alt="edit" src={editIco} />
+                    </IconButton>
+                  </div>
+                  <div className={styles.borderDv}>
+                    <p>{el.type}</p>
+                  </div>
+                  <div className={styles.borderDv}>
+                    <IconButton>
+                      <img alt="deleteIco" src={deleteIco} />
+                    </IconButton>
+                  </div>
+                </React.Fragment>
+              ))}
           </div>
         </div>
       </div>
