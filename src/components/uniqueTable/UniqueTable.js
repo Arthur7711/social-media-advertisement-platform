@@ -65,59 +65,7 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-const Uniquetable = () => {
-  const [portalData, setPortalData] = useState([
-    {
-      id: 1,
-      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
-      budget: "NZ$20.00 Daily",
-      result: "-",
-      impressions: "-",
-      clicks: "-",
-      CPC: "-",
-      spend: "-",
-    },
-    {
-      id: 2,
-      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
-      budget: "NZ$20.00 Daily",
-      result: "-",
-      impressions: "-",
-      clicks: "-",
-      CPC: "-",
-      spend: "-",
-    },
-    {
-      id: 3,
-      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
-      budget: "NZ$20.00 Daily",
-      result: "-",
-      impressions: "-",
-      clicks: "-",
-      CPC: "-",
-      spend: "-",
-    },
-    {
-      id: 4,
-      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
-      budget: "NZ$20.00 Daily",
-      result: "-",
-      impressions: "-",
-      clicks: "-",
-      CPC: "-",
-      spend: "-",
-    },
-    {
-      id: 5,
-      name: "Ongoing Conversions Promotion http://www.empirefurniture.co.nz/",
-      budget: "NZ$20.00 Daily",
-      result: "-",
-      impressions: "-",
-      clicks: "-",
-      CPC: "-",
-      spend: "-",
-    },
-  ]);
+const Uniquetable = ({ portalData }) => {
   return (
     <main>
       <div className={styles.top}>

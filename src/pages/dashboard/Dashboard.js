@@ -7,8 +7,13 @@ import Simplebutton from "../../components/simpleButton/SimpleButton";
 import MySelect from "../../components/userComp/MySelect";
 import UniqueTable from "../../components/uniqueTable/UniqueTable";
 import MyChart from "../../components/myChart/MyChart";
+import { useSelector, useDispatch } from "react-redux";
+import { tableDetails } from "../../features/dashboard/tabelSlice";
 
 const Dashboard = () => {
+  const tableData = useSelector((state) => state.tableData);
+  const dispatch = useDispatch();
+
   return (
     <PersistentDrawerLeft>
       <div className={styles.dash}>
@@ -28,8 +33,9 @@ const Dashboard = () => {
           />
           <span>Aee your data and compare them with each other.</span>
         </div>
-        <div>{/* charts will be here */}
-        <MyChart />
+        <div>
+          {/* charts will be here */}
+          <MyChart />
         </div>
         <div className={styles.subInfo}>
           <h5>ACCOUNT BREAKDOWN VIEW</h5>
@@ -124,7 +130,7 @@ const Dashboard = () => {
           </span>
         </div>
         <div>
-          <UniqueTable />
+          <UniqueTable portalData={tableData.incomingdata} />
         </div>
       </div>
     </PersistentDrawerLeft>
