@@ -2,20 +2,34 @@ import React from "react";
 import Mylabel from "../../components/myLabel/MyLabel";
 import styles from "./Login.module.css";
 import Mybutton from "../../components/myButton/MyButton";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 import { useSelector, useDispatch } from "react-redux";
 import {
   email,
   password,
-  fetchUserById,
+  // fetchUserById,
 } from "../../features/login/loginSlice";
 import { useTranslation } from "react-i18next";
+import { API } from "../../API/API";
 
 const Login = () => {
   const logining = useSelector((state) => state.login);
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
+  const history = useHistory();
+
+  async function sendingRequest() {
+    API.post("/auth", logining)
+      .then((res) => {
+        console.log(res);
+        return history.push("/dashboard");
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  }
 
   return (
     // <h1>{t("Welcome to React")}</h1>
@@ -43,9 +57,9 @@ const Login = () => {
           />
           <div className={styles.btn}>
             <Mybutton
-              clickFN={() => dispatch(fetchUserById(logining))}
+              clickFN={() => sendingRequest()}
               title="Log In"
-              HREF={logining.answer == 400 ? "/login" : "/dashboard"}
+              // HREF={logining.answer == 400 ? "/login" : "/dashboard"}
               ico={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
