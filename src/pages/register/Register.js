@@ -4,18 +4,30 @@ import Mylabel from "../../components/myLabel/MyLabel";
 import Mybutton from "../../components/myButton/MyButton";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
+import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   fullname,
   email,
   password,
   country,
-  fetchUserRegister,
+  // fetchUserRegister,
 } from "../../features/register/registerSlice";
+import { API } from "../../API/API";
 
 const Register = () => {
   const registering = useSelector((state) => state.register);
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  async function sendingRegisterData() {
+    API.post("/auth/register", registering)
+      .then((res) => {
+        console.log(res);
+        history.push("/dashboard");
+      })
+      .catch((err) => console.log("err", err));
+  }
 
   return (
     <div className={styles.log}>
@@ -60,9 +72,8 @@ const Register = () => {
           </p>
           <div className={styles.btn}>
             <Mybutton
-              clickFN={() => dispatch(fetchUserRegister(registering))}
+              clickFN={() => sendingRegisterData()}
               title="Register"
-              HREF="/dashboard"
               ico={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

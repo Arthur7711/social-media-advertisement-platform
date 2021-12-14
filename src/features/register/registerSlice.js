@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { API } from "../../API/API";
+// import { API } from "../../API/API";
 
 const initialState = {
   fullname: "",
@@ -7,23 +7,23 @@ const initialState = {
   password: "",
   country: "",
 };
-export const fetchUserRegister = createAsyncThunk(
-  "register/fetchUserRegister",
-  async (userstate) => {
-    const response = await API.post("/auth", {
-      fullname: userstate?.fullname,
-      email: userstate?.email,
-      password: userstate?.password,
-      country: userstate?.country,
-    })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-);
+// export const fetchUserRegister = createAsyncThunk(
+//   "register/fetchUserRegister",
+//   async (userstate) => {
+//     const response = await API.post("/auth", {
+//       fullname: userstate?.fullname,
+//       email: userstate?.email,
+//       password: userstate?.password,
+//       country: userstate?.country,
+//     })
+//       .then(function (response) {
+//         console.log(response);
+//       })
+//       .catch(function (error) {
+//         console.log(error);
+//       });
+//   }
+// );
 
 export const registerSlice = createSlice({
   name: "register",
