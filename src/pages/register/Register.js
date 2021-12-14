@@ -24,7 +24,7 @@ const Register = () => {
     API.post("/auth/register", registering)
       .then((res) => {
         console.log(res);
-        history.push("/dashboard");
+        history.push("/login");
       })
       .catch((err) => console.log("err", err));
   }

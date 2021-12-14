@@ -14,6 +14,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { API } from "../../API/API";
 
+
 const Login = () => {
   const logining = useSelector((state) => state.login);
   const dispatch = useDispatch();
@@ -23,8 +24,11 @@ const Login = () => {
   async function sendingRequest() {
     API.post("/auth", logining)
       .then((res) => {
-        console.log(res);
-        return history.push("/dashboard");
+        if ("token" in res.data) {
+          localStorage.setItem("token", res.data.token);
+          console.log(res);
+          return history.push("/dashboard");
+        }
       })
       .catch((err) => {
         console.log("err", err);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -30,6 +30,7 @@ import question from "../../../images/question.png";
 import out from "../../../images/out.png";
 import SimpleDialogDemo from "../RingMenu";
 import TextGenerator from "../../../pages/textGenerator/TextGenerator";
+import jwt_decode from "jwt-decode";
 
 function stringToColor(string) {
   let hash = 0;
@@ -114,7 +115,7 @@ export default function PersistentDrawerLeft({ children }) {
 
   const [userInfo, setUserInfo] = useState({
     image: user,
-    name: "Charles Hu",
+    name: "",
     title: "Business Admin",
   });
   const [incomingData, setIncomingData] = useState([
@@ -145,6 +146,15 @@ export default function PersistentDrawerLeft({ children }) {
   ]);
   const [isopen, setIsOpen] = useState(false);
   const [doesOpen, setDoesOpen] = useState(false);
+  let decoded;
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      history.push("/login");
+    } else {
+      decoded = jwt_decode(localStorage.getItem("token"));
+      setUserInfo({ ...userInfo, name: decoded.name });
+    }
+  }, []);
 
   const navState = [
     {
