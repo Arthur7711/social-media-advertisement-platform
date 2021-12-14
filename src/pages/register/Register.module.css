@@ -75,3 +75,12 @@
   font-size: 18px;
   color: #04118a;
 }
+.countryPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.countryPart > {
+  width: 40rem;
+}

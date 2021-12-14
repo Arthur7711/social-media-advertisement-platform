@@ -1,29 +1,11 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-// import { API } from "../../API/API";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   fullname: "",
   email: "",
   password: "",
-  country: "",
+  country: 0,
 };
-// export const fetchUserRegister = createAsyncThunk(
-//   "register/fetchUserRegister",
-//   async (userstate) => {
-//     const response = await API.post("/auth", {
-//       fullname: userstate?.fullname,
-//       email: userstate?.email,
-//       password: userstate?.password,
-//       country: userstate?.country,
-//     })
-//       .then(function (response) {
-//         console.log(response);
-//       })
-//       .catch(function (error) {
-//         console.log(error);
-//       });
-//   }
-// );
 
 export const registerSlice = createSlice({
   name: "register",

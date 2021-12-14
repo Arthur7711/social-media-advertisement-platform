@@ -11,9 +11,9 @@ import {
   email,
   password,
   country,
-  // fetchUserRegister,
 } from "../../features/register/registerSlice";
 import { API } from "../../API/API";
+import CountrySelect from "../../components/userComp/Countries";
 
 const Register = () => {
   const registering = useSelector((state) => state.register);
@@ -59,13 +59,9 @@ const Register = () => {
             type="password"
             plat="Password"
           />
-          <Mylabel
-            onchange={(el) => dispatch(country(el.target.value))}
-            data={registering.country}
-            name="Country"
-            type="text"
-            plat="Select you country"
-          />
+          <div className={styles.countryPart}>
+            <CountrySelect onchange={(el) => dispatch(country(el))} />
+          </div>
 
           <p className={styles.p}>
             By registering you agree to the Terms of Use
