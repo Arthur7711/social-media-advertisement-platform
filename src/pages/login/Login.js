@@ -8,19 +8,14 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   email,
   password,
-  fetchUserById
+  fetchUserById,
 } from "../../features/login/loginSlice";
 import { useTranslation } from "react-i18next";
-// import { API } from "../../API/API";
 
 const Login = () => {
   const logining = useSelector((state) => state.login);
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
-
-  function dataSending() {
-    console.log(JSON.stringify(logining));
-  }
 
   return (
     // <h1>{t("Welcome to React")}</h1>
@@ -50,7 +45,7 @@ const Login = () => {
             <Mybutton
               clickFN={() => dispatch(fetchUserById(logining))}
               title="Log In"
-              HREF="/dashboard"
+              HREF={logining.answer == 400 ? "/login" : "/dashboard"}
               ico={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
