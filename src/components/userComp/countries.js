@@ -15,10 +15,6 @@ export default function CountrySelect({ onchange }) {
     });
   }, [text]);
 
-  console.log(countries);
-  console.log(text, "text");
-  console.log(selected, "selected");
-
   return (
     <Autocomplete
       id="country-select-demo"

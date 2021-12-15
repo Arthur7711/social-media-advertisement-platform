@@ -22,7 +22,6 @@ export default function HorizontalNonLinearStepper() {
   const handleStep = (step) => () => {
     dispatch(videoId(step));
   };
-  console.log(loginingVideo.videoId, "id");
   return (
     <Box sx={{ width: "100%", marginTop: "100px" }}>
       <Stepper nonLinear activeStep={loginingVideo.videoId}>
