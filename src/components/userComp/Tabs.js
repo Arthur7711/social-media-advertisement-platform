@@ -16,6 +16,7 @@ import {
   userSec,
   emailSec,
   confirmEmailSec,
+  userImg,
 } from "../../features/settings/generalSlice.js";
 import {
   firstName,
@@ -85,6 +86,7 @@ export default function BasicTabs() {
   const billingSettings = useSelector((state) => state.billing);
   const dispatch = useDispatch();
 
+  let formData = new FormData();
   const checkData = () => console.log(JSON.stringify(generalSettings));
   const checkBillingData = () => console.log(JSON.stringify(billingSettings));
 
@@ -155,7 +157,19 @@ export default function BasicTabs() {
                 alignItems: "center",
               }}
             >
-              <img alt="download" src={down} />
+              <label htmlFor="myFor">
+                <img alt="download" src={down} />
+                <input
+                  onChange={(el) => {
+                    formData.append("image", el);
+                    console.log(formData.get("image"));
+                    return dispatch(userImg(formData.get("image")));
+                  }}
+                  style={{ display: "none" }}
+                  type="file"
+                  id="myFor"
+                />
+              </label>
               <div style={{ display: "grid", gridTemplateColumns: "100%" }}>
                 <SimpleInput
                   onchange={(el) => dispatch(userFirst(el.target.value))}
