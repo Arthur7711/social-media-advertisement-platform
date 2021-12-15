@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   userFirst: "",
   emailFirst: "",
-  userImg: null,
+  image: null,
   userSec: "",
   emailSec: "",
   confirmEmailSec: "",
@@ -19,8 +19,8 @@ export const generalSlice = createSlice({
     emailFirst: (state, action) => {
       state.emailFirst = action.payload;
     },
-    userImg: (state, action) => {
-      state.emailFirst = action.payload;
+    image: (state, action) => {
+      state.image = action.payload;
     },
     userSec: (state, action) => {
       state.userSec = action.payload;
@@ -37,7 +37,7 @@ export const generalSlice = createSlice({
 export const {
   userFirst,
   emailFirst,
-  userImg,
+  image,
   userSec,
   emailSec,
   confirmEmailSec,

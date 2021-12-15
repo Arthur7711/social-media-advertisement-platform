@@ -16,7 +16,7 @@ import {
   userSec,
   emailSec,
   confirmEmailSec,
-  userImg,
+  image,
 } from "../../features/settings/generalSlice.js";
 import {
   firstName,
@@ -86,7 +86,6 @@ export default function BasicTabs() {
   const billingSettings = useSelector((state) => state.billing);
   const dispatch = useDispatch();
 
-  let formData = new FormData();
   const checkData = () => console.log(JSON.stringify(generalSettings));
   const checkBillingData = () => console.log(JSON.stringify(billingSettings));
 
@@ -157,17 +156,13 @@ export default function BasicTabs() {
                 alignItems: "center",
               }}
             >
-              <label htmlFor="myFor">
-                <img alt="download" src={down} />
+              <label htmlFor="myForlable">
+                <img alt="download" src={generalSettings.image?URL.createObjectURL(generalSettings?.image):down} />
                 <input
-                  onChange={(el) => {
-                    formData.append("image", el);
-                    console.log(formData.get("image"));
-                    return dispatch(userImg(formData.get("image")));
-                  }}
+                onChange={e=> dispatch(image(e.target.files[0]))}
                   style={{ display: "none" }}
                   type="file"
-                  id="myFor"
+                  id="myForlable"
                 />
               </label>
               <div style={{ display: "grid", gridTemplateColumns: "100%" }}>
