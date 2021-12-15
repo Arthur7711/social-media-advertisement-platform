@@ -7,6 +7,7 @@ import Simplebutton from "../simpleButton/SimpleButton";
 import fb from "../../images/bfb.png";
 import sh from "../../images/sh.png";
 import linkedin from "../../images/in.png";
+import jwt_decode from "jwt-decode";
 
 function SimpleDialog(props) {
   const { onClose, selectedValue, open } = props;
@@ -14,6 +15,13 @@ function SimpleDialog(props) {
   const handleClose = () => {
     onClose(selectedValue);
   };
+  const [ref, setRef] = React.useState("");
+
+  let decoded;
+  React.useEffect(() => {
+    decoded = jwt_decode(localStorage.getItem("token"));
+    setRef(decoded.invite_link);
+  }, []);
 
   return (
     <Dialog onClose={handleClose} open={open}>
@@ -40,9 +48,7 @@ function SimpleDialog(props) {
         Get $10 in credit for every person you refer to ADCLOUD!
       </p>
       <div>
-        <input
-          placeholder="https://app.adcloud.com/auth/register?refId=0121139292160106094833"
-          type="text"
+        <p
           style={{
             border: "1px solid #F4F4F4",
             boxSizing: "border-box",
@@ -50,8 +56,14 @@ function SimpleDialog(props) {
             width: 500,
             height: 45,
             margin: "20px 30px",
+            fontSize: 14,
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: 20,
           }}
-        />
+        >
+          {window.location.origin}/register?refId={ref}
+        </p>
       </div>
       <div
         style={{

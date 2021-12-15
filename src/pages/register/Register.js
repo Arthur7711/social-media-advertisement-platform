@@ -14,14 +14,19 @@ import {
 } from "../../features/register/registerSlice";
 import { API } from "../../API/API";
 import CountrySelect from "../../components/userComp/Countries";
+import { useLocation } from "react-router-dom";
 
 const Register = () => {
   const registering = useSelector((state) => state.register);
   const dispatch = useDispatch();
   const history = useHistory();
-
+const location = useLocation()
+console.log(location);
   async function sendingRegisterData() {
-    API.post("/auth/register", registering)
+    let api = "/auth/register";
+    api += location.search
+  
+    API.post(api, registering)
       .then((res) => {
         console.log(res);
         history.push("/login");

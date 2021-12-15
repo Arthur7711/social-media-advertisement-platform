@@ -146,6 +146,7 @@ export default function PersistentDrawerLeft({ children }) {
   ]);
   const [isopen, setIsOpen] = useState(false);
   const [doesOpen, setDoesOpen] = useState(false);
+  
   let decoded;
   useEffect(() => {
     if (!localStorage.getItem("token")) {
@@ -153,6 +154,7 @@ export default function PersistentDrawerLeft({ children }) {
     } else {
       decoded = jwt_decode(localStorage.getItem("token"));
       setUserInfo({ ...userInfo, name: decoded.name });
+      console.log(decoded);
     }
   }, []);
 
