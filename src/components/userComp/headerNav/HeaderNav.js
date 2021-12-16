@@ -114,7 +114,7 @@ export default function PersistentDrawerLeft({ children }) {
   let history = useHistory();
 
   const [userInfo, setUserInfo] = useState({
-    image: user,
+    image: "",
     name: "",
     title: "Business Admin",
   });
@@ -153,7 +153,7 @@ export default function PersistentDrawerLeft({ children }) {
       history.push("/login");
     } else {
       decoded = jwt_decode(localStorage.getItem("token"));
-      setUserInfo({ ...userInfo, name: decoded.name });
+      setUserInfo({ ...userInfo, name: decoded.name, image: decoded.image });
     }
   }, []);
 
