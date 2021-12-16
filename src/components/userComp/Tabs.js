@@ -88,10 +88,20 @@ export default function BasicTabs() {
 
   async function checkData() {
     console.log(JSON.stringify(generalSettings));
-    return API.patch("/auth/change-settings", generalSettings, {
+    const newData = new FormData();
+    for (let key in generalSettings) {
+      newData.append(key, generalSettings[key]);
+    }
+    console.log(newData);
+    return API.patch("/auth/change-settings", newData, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
+    }).then((r) => {
+      if ("refresh_token" in r.data) {
+        localStorage.setItem("token", r.data.refresh_token);
+        window.location.reload()
+      }
     });
   }
   const checkBillingData = () => console.log(JSON.stringify(billingSettings));
@@ -166,6 +176,7 @@ export default function BasicTabs() {
               <label htmlFor="myForlable">
                 <img
                   alt="download"
+                  width={100}
                   src={
                     generalSettings.image
                       ? URL.createObjectURL(generalSettings?.image)
