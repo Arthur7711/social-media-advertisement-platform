@@ -653,7 +653,10 @@ export default function PersistentDrawerLeft({ children }) {
                 paddingBottom: 10,
                 cursor: "pointer",
               }}
-              onClick={() => history.push("/login")}
+              onClick={() => {
+                localStorage.removeItem("token");
+                history.push("/login");
+              }}
             >
               <img src={out} alt="logout" />
               <span style={{ color: "#575757", marginLeft: 10 }}>Logout</span>
