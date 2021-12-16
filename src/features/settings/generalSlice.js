@@ -1,46 +1,36 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  userFirst: "",
-  emailFirst: "",
+  fullname: "",
+  email: "",
   image: null,
-  userSec: "",
-  emailSec: "",
-  confirmEmailSec: "",
+  oldPassword: "",
+  newPassword: "",
 };
 
 export const generalSlice = createSlice({
   name: "general",
   initialState,
   reducers: {
-    userFirst: (state, action) => {
-      state.userFirst = action.payload;
+    fullname: (state, action) => {
+      state.fullname = action.payload;
     },
-    emailFirst: (state, action) => {
-      state.emailFirst = action.payload;
+    email: (state, action) => {
+      state.email = action.payload;
     },
     image: (state, action) => {
       state.image = action.payload;
     },
-    userSec: (state, action) => {
-      state.userSec = action.payload;
+    oldPassword: (state, action) => {
+      state.oldPassword = action.payload;
     },
-    emailSec: (state, action) => {
-      state.emailSec = action.payload;
-    },
-    confirmEmailSec: (state, action) => {
-      state.confirmEmailSec = action.payload;
+    newPassword: (state, action) => {
+      state.newPassword = action.payload;
     },
   },
 });
 
-export const {
-  userFirst,
-  emailFirst,
-  image,
-  userSec,
-  emailSec,
-  confirmEmailSec,
-} = generalSlice.actions;
+export const { fullname, email, image, oldPassword, newPassword } =
+  generalSlice.actions;
 
 export default generalSlice.reducer;

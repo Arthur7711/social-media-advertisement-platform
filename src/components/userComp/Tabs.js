@@ -11,11 +11,10 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import MyTable from "../myTable/MyTable";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  userFirst,
-  emailFirst,
-  userSec,
-  emailSec,
-  confirmEmailSec,
+  fullname,
+  email,
+  oldPassword,
+  newPassword,
   image,
 } from "../../features/settings/generalSlice.js";
 import {
@@ -25,6 +24,7 @@ import {
   vat,
   cardCheck,
 } from "../../features/settings/billingSlice";
+import { API } from "../../API/API";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -86,7 +86,14 @@ export default function BasicTabs() {
   const billingSettings = useSelector((state) => state.billing);
   const dispatch = useDispatch();
 
-  const checkData = () => console.log(JSON.stringify(generalSettings));
+  async function checkData() {
+    console.log(JSON.stringify(generalSettings));
+    return API.patch("/auth/change-settings", generalSettings, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+  }
   const checkBillingData = () => console.log(JSON.stringify(billingSettings));
 
   return (
@@ -157,9 +164,16 @@ export default function BasicTabs() {
               }}
             >
               <label htmlFor="myForlable">
-                <img alt="download" src={generalSettings.image?URL.createObjectURL(generalSettings?.image):down} />
+                <img
+                  alt="download"
+                  src={
+                    generalSettings.image
+                      ? URL.createObjectURL(generalSettings?.image)
+                      : down
+                  }
+                />
                 <input
-                onChange={e=> dispatch(image(e.target.files[0]))}
+                  onChange={(e) => dispatch(image(e.target.files[0]))}
                   style={{ display: "none" }}
                   type="file"
                   id="myForlable"
@@ -167,14 +181,14 @@ export default function BasicTabs() {
               </label>
               <div style={{ display: "grid", gridTemplateColumns: "100%" }}>
                 <SimpleInput
-                  onchange={(el) => dispatch(userFirst(el.target.value))}
-                  data={generalSettings.userFirst}
-                  plac="Charles Hu"
+                  onchange={(el) => dispatch(fullname(el.target.value))}
+                  data={generalSettings.fullname}
+                  plac="new name"
                   WIDTH="445px"
                 />
                 <SimpleInput
-                  onchange={(el) => dispatch(emailFirst(el.target.value))}
-                  data={generalSettings.emailFirst}
+                  onchange={(el) => dispatch(email(el.target.value))}
+                  data={generalSettings.email}
                   plac="kivi_nz@hotmail.com"
                   WIDTH="445px"
                 />
@@ -212,22 +226,22 @@ export default function BasicTabs() {
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "100%" }}>
               <SimpleInput
-                data={generalSettings.userSec}
-                onchange={(el) => dispatch(userSec(el.target.value))}
-                plac="Charles Hu"
+                data={generalSettings.fullname}
+                onchange={(el) => dispatch(fullname(el.target.value))}
+                plac="new name"
                 WIDTH="500px"
               />
               <div>
                 <SimpleInput
-                  data={generalSettings.emailSec}
-                  onchange={(el) => dispatch(emailSec(el.target.value))}
-                  plac="kivi_nz@hotmail.com"
+                  data={generalSettings.oldPassword}
+                  onchange={(el) => dispatch(oldPassword(el.target.value))}
+                  plac="old password"
                   WIDTH="240px"
                 />
                 <SimpleInput
-                  data={generalSettings.confirmEmailSec}
-                  onchange={(el) => dispatch(confirmEmailSec(el.target.value))}
-                  plac="kivi_nz@hotmail.com"
+                  data={generalSettings.newPassword}
+                  onchange={(el) => dispatch(newPassword(el.target.value))}
+                  plac="new password"
                   WIDTH="240px"
                 />
               </div>
