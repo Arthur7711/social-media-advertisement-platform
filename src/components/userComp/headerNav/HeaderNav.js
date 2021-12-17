@@ -31,6 +31,7 @@ import out from "../../../images/out.png";
 import SimpleDialogDemo from "../RingMenu";
 import TextGenerator from "../../../pages/textGenerator/TextGenerator";
 import jwt_decode from "jwt-decode";
+import { API } from "../../../API/API";
 
 function stringToColor(string) {
   let hash = 0;
@@ -156,6 +157,24 @@ export default function PersistentDrawerLeft({ children }) {
       setUserInfo({ ...userInfo, name: decoded.name, image: decoded.image });
       console.log(decoded);
     }
+  }, []);
+
+  useEffect(() => {
+    // (async function getingData() {
+    API.get(`/auth/token`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => {
+        res.data.refresh_token &&
+          localStorage.setItem("token", res.data.refresh_token);
+        console.log(res.data, "res");
+      })
+      .catch((err) => {
+        localStorage.removeItem("token");
+        console.log("err", err.response);
+      });
   }, []);
 
   const navState = [

@@ -157,6 +157,11 @@ export default function SimpleDialogDemo() {
     setOpen(false);
     setSelectedValue(value);
   };
+  let decoded;
+  React.useEffect(() => {
+    decoded = jwt_decode(localStorage.getItem("token"));
+    setCoins(decoded.coin);
+  }, []);
 
   return (
     <>
