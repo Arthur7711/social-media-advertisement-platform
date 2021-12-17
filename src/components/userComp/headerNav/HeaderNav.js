@@ -154,6 +154,7 @@ export default function PersistentDrawerLeft({ children }) {
     } else {
       decoded = jwt_decode(localStorage.getItem("token"));
       setUserInfo({ ...userInfo, name: decoded.name, image: decoded.image });
+      console.log(decoded);
     }
   }, []);
 
@@ -412,7 +413,12 @@ export default function PersistentDrawerLeft({ children }) {
                 cursor: "pointer",
               }}
             >
-              <Avatar alt="Remy Sharp" src={userInfo.image} />
+              <Avatar
+                src={
+                  userInfo.image &&
+                  `http://192.168.77.222:8000/images/${userInfo.image}`
+                }
+              />
               <div style={{ margin: "0 10px" }}>
                 <p
                   style={{
