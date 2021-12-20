@@ -1,4 +1,5 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 import styles from "./MyLabel.module.css";
 
 const Mylabel = ({ name, type, plat, data, onchange }) => {
@@ -21,6 +22,14 @@ const Mylabel = ({ name, type, plat, data, onchange }) => {
       </label>
     </div>
   );
+};
+
+Mylabel.propTypes = {
+  name: PropTypes.string,
+  type: PropTypes.string,
+  plat: PropTypes.string,
+  data: PropTypes.string,
+  onchange: PropTypes.func,
 };
 
 export default Mylabel;
