@@ -1,10 +1,11 @@
 import React from "react";
 import Simplebutton from "../simpleButton/SimpleButton";
-import styles from "./MyTable.module.css";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import { IconButton } from "@mui/material";
+import { PropTypes } from "prop-types";
+import styles from "./MyTable.module.css";
 
-export default function MyTable({ titles, datas }) {
+function MyTable({ titles, datas }) {
   return (
     <div className={styles.my}>
       {titles.map((el, i) => (
@@ -12,7 +13,7 @@ export default function MyTable({ titles, datas }) {
           {el}
         </p>
       ))}
-      {datas.map((el,i) => (
+      {datas.map((el, i) => (
         <React.Fragment key={i}>
           <div
             style={{
@@ -77,3 +78,10 @@ export default function MyTable({ titles, datas }) {
     </div>
   );
 }
+
+MyTable.propTypes = {
+  titles: PropTypes.array,
+  datas: PropTypes.array,
+};
+
+export default MyTable;
