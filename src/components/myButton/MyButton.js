@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { PropTypes } from "prop-types";
 import styles from "./MyButton.module.css";
 
 const Mybutton = ({
@@ -35,6 +36,16 @@ const Mybutton = ({
       </div>
     </button>
   );
+};
+Mybutton.propTypes = {
+  title: PropTypes.string,
+  BG: PropTypes.string,
+  ico: PropTypes.object,
+  COLOR: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  imgColor: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  WIDTH: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  HREF: PropTypes.string,
+  clickFN: PropTypes.func,
 };
 
 export default Mybutton;
