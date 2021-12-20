@@ -13,7 +13,7 @@ function Narrow({ text }) {
 }
 
 Narrow.propTypes = {
-  text=PropTypes.string
+  text:PropTypes.string
 }
 
 export default Narrow;
