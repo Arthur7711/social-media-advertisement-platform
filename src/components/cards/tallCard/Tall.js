@@ -1,4 +1,5 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 import Mybutton from "../../myButton/MyButton";
 import styles from "./Tall.module.css";
 
@@ -26,11 +27,21 @@ const Tall = ({ title, subtitle, HEIGHT, texts, money, COLOR, BG }) => {
           COLOR={BG.length < 10 ? BG : "#04118A"}
           BG={COLOR ? COLOR : "#04118A"}
           WIDTH="340px"
-          HREF='/register'
+          HREF="/register"
         />
       </div>
     </div>
   );
+};
+
+Tall.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  BG: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  COLOR: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  texts: PropTypes.array,
+  money: PropTypes.string,
+  HEIGHT: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
 export default Tall;
