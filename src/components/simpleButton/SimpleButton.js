@@ -1,4 +1,5 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 
 const Simplebutton = ({ COLOR, BG, text, WIDTH, BORDERCOLOR, clickFN }) => {
   return (
@@ -18,6 +19,15 @@ const Simplebutton = ({ COLOR, BG, text, WIDTH, BORDERCOLOR, clickFN }) => {
       {text}
     </button>
   );
+};
+
+Simplebutton.propTypes = {
+  COLOR: PropTypes.string,
+  BG: PropTypes.string,
+  text: PropTypes.string,
+  WIDTH: PropTypes.string,
+  BORDERCOLOR: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  clickFN: PropTypes.func,
 };
 
 export default Simplebutton;
