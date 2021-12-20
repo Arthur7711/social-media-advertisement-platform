@@ -1,4 +1,5 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 import styles from "./MediaSoc.module.css";
 
 const Mediasoc = ({ ico, text }) => {
@@ -11,5 +12,8 @@ const Mediasoc = ({ ico, text }) => {
     </div>
   );
 };
-
+Mediasoc.propTypes = {
+  ico: PropTypes.string,
+  text: PropTypes.string,
+};
 export default Mediasoc;
