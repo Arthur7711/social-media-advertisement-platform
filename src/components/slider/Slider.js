@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { PropTypes } from "prop-types";
 
 const Slider = ({ data }) => {
   const responsive = {
@@ -81,6 +82,10 @@ const Slider = ({ data }) => {
       </Carousel>
     </>
   );
+};
+
+Slider.propTypes = {
+  data: PropTypes.array,
 };
 
 export default Slider;
