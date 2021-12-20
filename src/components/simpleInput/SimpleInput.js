@@ -1,13 +1,7 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 
-export default function SimpleInput({
-  plac,
-  WIDTH,
-  COLOR,
-  TYPE,
-  data,
-  onchange,
-}) {
+function SimpleInput({ plac, WIDTH, COLOR, TYPE, data, onchange }) {
   return (
     <input
       type={TYPE ? TYPE : "text"}
@@ -27,3 +21,14 @@ export default function SimpleInput({
     />
   );
 }
+
+SimpleInput.propTypes = {
+  plac: PropTypes.string,
+  WIDTH: PropTypes.string,
+  COLOR: PropTypes.string,
+  TYPE: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  data: PropTypes.string,
+  onchange: PropTypes.func,
+};
+
+export default SimpleInput;
