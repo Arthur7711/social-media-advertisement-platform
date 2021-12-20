@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "./Middle.module.css";
 import arrow from "../../../images/arrow.png";
+import { PropTypes } from "prop-types";
+import styles from "./Middle.module.css";
 
 const Middle = ({ ico, title, desc }) => {
   return (
@@ -17,6 +18,12 @@ const Middle = ({ ico, title, desc }) => {
       </div>
     </div>
   );
+};
+
+Middle.propTypes = {
+  title: PropTypes.string,
+  desc: PropTypes.string,
+  ico: PropTypes.string,
 };
 
 export default Middle;
