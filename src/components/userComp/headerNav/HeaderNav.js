@@ -32,6 +32,7 @@ import SimpleDialogDemo from "../RingMenu";
 import TextGenerator from "../../../pages/textGenerator/TextGenerator";
 import jwt_decode from "jwt-decode";
 import { API } from "../../../API/API";
+import { PropTypes } from "prop-types";
 
 function stringToColor(string) {
   let hash = 0;
@@ -111,7 +112,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-export default function PersistentDrawerLeft({ children }) {
+function PersistentDrawerLeft({ children }) {
   let history = useHistory();
 
   const [userInfo, setUserInfo] = useState({
@@ -695,3 +696,9 @@ export default function PersistentDrawerLeft({ children }) {
     </Box>
   );
 }
+
+PersistentDrawerLeft.propTypes = {
+  children: PropTypes.object,
+};
+
+export default PersistentDrawerLeft;
