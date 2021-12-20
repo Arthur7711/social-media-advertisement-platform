@@ -33,6 +33,7 @@ import TextGenerator from "../../../pages/textGenerator/TextGenerator";
 import jwt_decode from "jwt-decode";
 import { API } from "../../../API/API";
 import { PropTypes } from "prop-types";
+import { useLocation } from "react-router-dom";
 
 function stringToColor(string) {
   let hash = 0;
@@ -159,6 +160,7 @@ function PersistentDrawerLeft({ children }) {
       console.log(decoded);
     }
   }, []);
+  console.log(useLocation(), "location");
 
   useEffect(() => {
     // (async function getingData() {
@@ -176,7 +178,7 @@ function PersistentDrawerLeft({ children }) {
         localStorage.removeItem("token");
         console.log("err", err.response);
       });
-  }, []);
+  }, [useLocation().pathname]);
 
   const navState = [
     {
