@@ -1,14 +1,15 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 import styles from "./Long.module.css";
 
-export default function Long({ title, SRC, desc, BG, COLOR,clicked,setDoesSelected }) {
+function Long({ title, SRC, desc, BG, COLOR, clicked, setDoesSelected }) {
   return (
     <div
       style={{
         background: BG ? BG : "#fff",
       }}
       className={styles.long}
-      onClick={()=>setDoesSelected(clicked)}
+      onClick={() => setDoesSelected(clicked)}
     >
       <div
         className={styles.imgArea}
@@ -25,3 +26,15 @@ export default function Long({ title, SRC, desc, BG, COLOR,clicked,setDoesSelect
     </div>
   );
 }
+
+Long.propTypes = {
+  title: PropTypes.string,
+  desc: PropTypes.string,
+  SRC: PropTypes.string,
+  BG: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  COLOR: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  clicked: PropTypes.number,
+  setDoesSelected: PropTypes.func,
+};
+
+export default Long;
