@@ -11,6 +11,7 @@ import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Pagination from "../userComp/Pagination";
+import { PropTypes } from "prop-types";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -258,6 +259,10 @@ const Uniquetable = ({ portalData }) => {
       </main>
     </main>
   );
+};
+
+Uniquetable.propTypes = {
+  portalData: PropTypes.array,
 };
 
 export default Uniquetable;
