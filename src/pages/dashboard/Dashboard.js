@@ -6,7 +6,7 @@ import insta from "../../images/binsta.png";
 import Simplebutton from "../../components/simpleButton/SimpleButton";
 import MySelect from "../../components/userComp/MySelect";
 import UniqueTable from "../../components/uniqueTable/UniqueTable";
-import MyChart from "../../components/myChart/MyChart";
+// import MyChart from "../../components/myChart/MyChart";
 import { useSelector, useDispatch } from "react-redux";
 import { tableDetails } from "../../features/dashboard/tabelSlice";
 
@@ -35,7 +35,7 @@ const Dashboard = () => {
         </div>
         <div>
           {/* charts will be here */}
-          <MyChart />
+          {/* <MyChart /> */}
         </div>
         <div className={styles.subInfo}>
           <h5>ACCOUNT BREAKDOWN VIEW</h5>
