@@ -3,8 +3,9 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { API } from "../../API/API";
+import { PropTypes } from "prop-types";
 
-export default function CountrySelect({ onchange }) {
+function CountrySelect({ onchange }) {
   const [countries, setCountries] = React.useState([]);
   const [text, setText] = React.useState("");
   const [selected, setSelected] = React.useState(0);
@@ -51,3 +52,7 @@ export default function CountrySelect({ onchange }) {
     />
   );
 }
+CountrySelect.propTypes = {
+  onchange: PropTypes.func,
+};
+export default CountrySelect;
