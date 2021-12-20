@@ -4,8 +4,9 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import { PropTypes } from "prop-types";
 
-export default function MySelect({ title, options, BG, COLOR, WIDTH }) {
+function MySelect({ title, options, BG, COLOR, WIDTH }) {
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
@@ -37,9 +38,24 @@ export default function MySelect({ title, options, BG, COLOR, WIDTH }) {
           onChange={handleChange}
           style={{ height: "40px" }}
         >
-          {options && options.map((el,i) => <MenuItem key={i} value={el}>{el}</MenuItem>)}
+          {options &&
+            options.map((el, i) => (
+              <MenuItem key={i} value={el}>
+                {el}
+              </MenuItem>
+            ))}
         </Select>
       </FormControl>
     </Box>
   );
 }
+
+MySelect.propTypes = {
+  title: PropTypes.string,
+  options: PropTypes.array,
+  BG: PropTypes.string,
+  COLOR: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  WIDTH: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+};
+
+export default MySelect;
