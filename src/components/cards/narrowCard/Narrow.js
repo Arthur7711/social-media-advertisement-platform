@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./Narrow.module.css";
 import plus from "../../../images/plus.png";
+import { PropTypes } from "prop-types";
 
-export default function Narrow({ text }) {
+function Narrow({ text }) {
   return (
     <div className={styles.narrow}>
       <span className={styles.text}>{text}</span>
@@ -10,3 +11,9 @@ export default function Narrow({ text }) {
     </div>
   );
 }
+
+Narrow.propTypes = {
+  text=PropTypes.string
+}
+
+export default Narrow;
