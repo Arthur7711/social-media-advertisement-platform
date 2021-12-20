@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
+import { PropTypes } from "prop-types";
 
 const steps = [
   "Platform",
@@ -12,7 +13,7 @@ const steps = [
   "Review & Publish",
 ];
 
-export default function CreateStepper({ children, activeStep, setActiveStep }) {
+function CreateStepper({ children, activeStep, setActiveStep }) {
   const [completed, setCompleted] = React.useState({});
 
   const handleStep = (step) => () => {
@@ -50,3 +51,10 @@ export default function CreateStepper({ children, activeStep, setActiveStep }) {
     </Box>
   );
 }
+
+CreateStepper.propTypes = {
+  children: PropTypes.array,
+  activeStep: PropTypes.number,
+  setActiveStep: PropTypes.func,
+};
+export default CreateStepper;
