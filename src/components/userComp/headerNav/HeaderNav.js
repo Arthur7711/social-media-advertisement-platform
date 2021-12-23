@@ -117,12 +117,6 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 function PersistentDrawerLeft({ children }) {
   let history = useHistory();
-  // const [decoded, setDecoded] = useState(null);
-  // const [userInfo, setUserInfo] = useState({
-  //   image: "",
-  //   name: "",
-  //   title: "Business Admin",
-  // });
   const [incomingData, setIncomingData] = useState([
     {
       image: user,
@@ -170,7 +164,7 @@ function PersistentDrawerLeft({ children }) {
   // console.log(useLocation(), "location");
 
   const result = useToken(() => {
-    // return console.log(result, "result from hook");
+    return console.log(result, "result from hook");
   });
 
   // useEffect(() => {
