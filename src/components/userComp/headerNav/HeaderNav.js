@@ -35,6 +35,7 @@ import { API } from "../../../API/API";
 import { PropTypes } from "prop-types";
 import { useLocation } from "react-router-dom";
 import { useToken } from "../../../hooks/useToken";
+import { useUserInfo } from "../../../hooks/useUserInfo";
 
 function stringToColor(string) {
   let hash = 0;
@@ -116,12 +117,12 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 function PersistentDrawerLeft({ children }) {
   let history = useHistory();
-  const [decoded, setDecoded] = useState(null);
-  const [userInfo, setUserInfo] = useState({
-    image: "",
-    name: "",
-    title: "Business Admin",
-  });
+  // const [decoded, setDecoded] = useState(null);
+  // const [userInfo, setUserInfo] = useState({
+  //   image: "",
+  //   name: "",
+  //   title: "Business Admin",
+  // });
   const [incomingData, setIncomingData] = useState([
     {
       image: user,
@@ -151,20 +152,24 @@ function PersistentDrawerLeft({ children }) {
   const [isopen, setIsOpen] = useState(false);
   const [doesOpen, setDoesOpen] = useState(false);
 
-  useEffect(() => {
-    if (!localStorage.getItem("token")) {
-      history.push("/login");
-    } else {
-      localStorage.getItem("token") &&
-        setDecoded(jwt_decode(localStorage.getItem("token")));
-      decoded &&
-        setUserInfo({ ...userInfo, name: decoded.name, image: decoded.image });
-      console.log(decoded);
-    }
-  }, []);
-  console.log(useLocation(), "location");
+  const userInfo = useUserInfo(() => {
+    console.log(userInfo, "userInfo");
+  });
 
-  const { result } = useToken(() => {
+  // useEffect(() => {
+  //   if (!localStorage.getItem("token")) {
+  //     history.push("/login");
+  //   } else {
+  //     localStorage.getItem("token") &&
+  //       setDecoded(jwt_decode(localStorage.getItem("token")));
+  //     decoded &&
+  //       setUserInfo({ ...userInfo, name: decoded.name, image: decoded.image });
+  //     console.log(decoded);
+  //   }
+  // }, []);
+  // console.log(useLocation(), "location");
+
+  const result = useToken(() => {
     // return console.log(result, "result from hook");
   });
 
