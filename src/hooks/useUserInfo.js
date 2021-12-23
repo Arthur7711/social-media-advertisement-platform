@@ -15,10 +15,10 @@ export const useUserInfo = (callback) => {
       history.push("/login");
       callback();
     } else {
-      let decoded = jwt_decode(localStorage.getItem("token"))||null
-      decoded && setUserInfo({ ...userInfo, name: decoded.name, image: decoded.image });
+      let decoded = jwt_decode(localStorage.getItem("token")) || null;
+      decoded &&
+        setUserInfo({ ...userInfo, name: decoded.name, image: decoded.image });
       callback();
-      console.log(decoded, "decoded");
     }
   }, []);
   return userInfo;

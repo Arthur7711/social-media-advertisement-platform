@@ -146,44 +146,9 @@ function PersistentDrawerLeft({ children }) {
   const [isopen, setIsOpen] = useState(false);
   const [doesOpen, setDoesOpen] = useState(false);
 
-  const userInfo = useUserInfo(() => {
-    console.log(userInfo, "userInfo");
-  });
+  const userInfo = useUserInfo(() => {});
 
-  // useEffect(() => {
-  //   if (!localStorage.getItem("token")) {
-  //     history.push("/login");
-  //   } else {
-  //     localStorage.getItem("token") &&
-  //       setDecoded(jwt_decode(localStorage.getItem("token")));
-  //     decoded &&
-  //       setUserInfo({ ...userInfo, name: decoded.name, image: decoded.image });
-  //     console.log(decoded);
-  //   }
-  // }, []);
-  // console.log(useLocation(), "location");
-
-  const result = useToken(() => {
-    return console.log(result, "result from hook");
-  });
-
-  // useEffect(() => {
-  //   // (async function getingData() {
-  //   API.get(`/auth/token`, {
-  //     headers: {
-  //       Authorization: `Bearer ${localStorage.getItem("token")}`,
-  //     },
-  //   })
-  //     .then((res) => {
-  //       res.data.refresh_token &&
-  //         localStorage.setItem("token", res.data.refresh_token);
-  //       console.log(res.data, "res");
-  //     })
-  //     .catch((err) => {
-  //       localStorage.removeItem("token");
-  //       console.log("err", err.response);
-  //     });
-  // }, [useLocation().pathname]);
+  const result = useToken(() => {});
 
   const navState = [
     {

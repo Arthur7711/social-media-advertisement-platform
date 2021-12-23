@@ -14,7 +14,6 @@ export const useToken = (callback) => {
         res.data.refresh_token &&
           localStorage.setItem("token", res.data.refresh_token);
         setResult(res.data);
-        console.log(res.data, "res");
         callback();
       })
       .catch((err) => {
