@@ -15,23 +15,31 @@ import {
 import { API } from "../../API/API";
 import CountrySelect from "../../components/userComp/Countries";
 import { useLocation } from "react-router-dom";
+import { setNotes } from "../../features/errComponent/errAction";
 
 const Register = () => {
   const registering = useSelector((state) => state.register);
   const dispatch = useDispatch();
   const history = useHistory();
-const location = useLocation()
-console.log(location);
+  const location = useLocation();
+
   async function sendingRegisterData() {
     let api = "/auth/register";
-    api += location.search
-  
+    api += location.search;
+
     API.post(api, registering)
       .then((res) => {
         console.log(res);
         history.push("/login");
       })
-      .catch((err) => console.log("err", err));
+      .catch((err) => {
+        if (err.response.status === 400) {
+          err.response.data.message.map((item) => {
+            dispatch(setNotes({ error: item }));
+          });
+        }
+        console.log("err", err.response.status);
+      });
   }
 
   return (

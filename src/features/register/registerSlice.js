@@ -4,7 +4,7 @@ const initialState = {
   fullname: "",
   email: "",
   password: "",
-  country: 0,
+  country: null,
 };
 
 export const registerSlice = createSlice({
