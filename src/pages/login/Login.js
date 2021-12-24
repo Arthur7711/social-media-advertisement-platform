@@ -6,14 +6,10 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  email,
-  password,
-  // fetchUserById,
-} from "../../features/login/loginSlice";
+import { email, password } from "../../features/login/loginSlice";
 import { useTranslation } from "react-i18next";
 import { API } from "../../API/API";
-
+import { setNotes } from "../../features/errComponent/errAction";
 
 const Login = () => {
   const logining = useSelector((state) => state.login);
@@ -31,7 +27,15 @@ const Login = () => {
         }
       })
       .catch((err) => {
-        console.log("err", err);
+        if (err.response.status === 400) {
+          err.response.data.message.map((item) => {
+            dispatch(setNotes({ error: item }));
+          });
+        } else if (err.response.status === 404) {
+          dispatch(setNotes({ error: err.response.data.error }));
+        }
+
+        console.log("err", err.response);
       });
   }
 

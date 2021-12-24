@@ -5,12 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
-import './i18n';
+import { SnackbarProvider } from "notistack";
+import "./i18n";
+import Notification from './features/errComponent/Notification'
 
 ReactDOM.render(
-    <Provider store={store}>
+  <Provider store={store}>
+    <SnackbarProvider maxSnack={3}>
+      <Notification />
       <App />
-    </Provider>,
+    </SnackbarProvider>
+  </Provider>,
   document.getElementById("root")
 );
 
